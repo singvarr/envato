@@ -1,0 +1,49 @@
+//COLORS
+$gray: #4a454b;
+$green: #90d23d;
+$white: #fff;
+$text: #242424;
+
+@mixin text($color, $font) {
+    color: $color;
+    font: $font;
+}
+
+@mixin input($color, $width, $height, $font, $border-radius, $border:solid 1px #bebebe) {
+    color: $color;
+    width: $width;
+    height: $height;
+    font: $font;
+    border-radius: $border-radius;
+    border: $border;
+    box-sizing: border-box;
+    outline: none;
+}
+
+@mixin button($bg-color, $bg-hover) {
+    border: none;
+    outline: none;
+    background-color: $bg-color;
+
+    &:hover {
+        background-color: $bg-hover;
+    }
+}
+
+@mixin block($width, $height: auto, $bg-color: transparent, $float: left) {
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    float: $float;
+}
+
+@mixin valign() {
+   font-size: 0;
+
+    &::before {
+        display: inline-block;
+        content: "";
+        height: 100%;
+        vertical-align: middle;
+    }
+}
