@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	//Additional methods for registration-box
 	$.validator.addMethod('fullName', function(value, elem) {
 		return /([A-Z]?[a-z]){3,15}\s([A-Z]?[a-z]){3,15}\b/.test(value);
 	}, 'Enter your name and surname');
@@ -12,7 +11,13 @@ $(document).ready(function() {
 		return /[a-z]\b/.test(value);
 	}, 'Allowed only lowercase letters');
 	
+	$.validator.setDefaults({
+		errorPlacement: function (err, elem) {
+			elem.attr("placeholder", err.text());
+		}
+	});
 
+	
 	$('#regBox').validate({
 		rules: {
 			fullName: {
@@ -40,7 +45,7 @@ $(document).ready(function() {
 
 		messages: {
 			fullName: {
-				required: 'You didn\'t entered your name and surname',
+				required: 'You didn\'t entered your name',
 			},
 
 			email: {
@@ -57,19 +62,16 @@ $(document).ready(function() {
 				minlength: 'Please, enter at least 5 characters',
 				maxlength: 'Value is too long'
 			}
-		},
-
-		errorPlacement: function (err, elem) {
-			err.appendTo(elem.parent().find('.err-msg'));
 		}
 	});
 
-	$('#feedback').validate({
+	$('#feedback-form').validate({
 		rules: {
 			email: {
 				required: true,
 				email: true
 			},
+
 			comment: {
 				required: true,
 				minlength: 10
@@ -85,10 +87,6 @@ $(document).ready(function() {
 				required: 'Type your comment here',
 				minlength: 'Please, enter at least 10 characters'
 			}
-		},
-
-		errorPlacement: function (err, elem) {
-			err.appendTo(elem.parent().find('.err-msg'));
 		}
 	});
 })
