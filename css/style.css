@@ -1,4 +1,4 @@
-.wrapper, main .description .schedule {
+.wrapper {
   margin: 0 auto;
   width: 1030px; }
 
@@ -60,6 +60,7 @@ header {
         header #main-menu ul li:last-child {
           margin-right: 0; }
         header #main-menu ul li a {
+          display: block;
           color: #fff;
           font: 15px "roboto-thin"; }
           header #main-menu ul li a:active, header #main-menu ul li a:hover {
@@ -72,11 +73,11 @@ main {
     background-color: #4a454b; }
     main .time-box::after {
       position: absolute; }
-    main .time-box .wrapper, main .time-box .description .schedule, main .description .time-box .schedule {
+    main .time-box .wrapper {
       position: relative;
       padding: 100px 0 400px;
       box-sizing: border-box; }
-      main .time-box .wrapper #countdown, main .time-box .description .schedule #countdown, main .description .time-box .schedule #countdown {
+      main .time-box .wrapper #countdown {
         width: 970px;
         height: 200px;
         background-color: #4a454b;
@@ -86,13 +87,13 @@ main {
         box-sizing: border-box;
         border: 2px solid #90d23d;
         border-radius: 20px; }
-        main .time-box .wrapper #countdown .digits, main .time-box .description .schedule #countdown .digits, main .description .time-box .schedule #countdown .digits {
+        main .time-box .wrapper #countdown .digits {
           padding-bottom: 10px;
           font-size: 0; }
-          main .time-box .wrapper #countdown .digits #days, main .time-box .description .schedule #countdown .digits #days, main .description .time-box .schedule #countdown .digits #days,
-          main .time-box .wrapper #countdown .digits #hours, main .time-box .description .schedule #countdown .digits #hours, main .description .time-box .schedule #countdown .digits #hours,
-          main .time-box .wrapper #countdown .digits #min, main .time-box .description .schedule #countdown .digits #min, main .description .time-box .schedule #countdown .digits #min,
-          main .time-box .wrapper #countdown .digits #sec, main .time-box .description .schedule #countdown .digits #sec, main .description .time-box .schedule #countdown .digits #sec {
+          main .time-box .wrapper #countdown .digits #days,
+          main .time-box .wrapper #countdown .digits #hours,
+          main .time-box .wrapper #countdown .digits #min,
+          main .time-box .wrapper #countdown .digits #sec {
             display: inline-block;
             width: 25%;
             height: 110px;
@@ -100,94 +101,94 @@ main {
             font: 110px "roboto-slab-thin";
             text-align: center;
             vertical-align: middle; }
-      main .time-box .wrapper .captions div, main .time-box .description .schedule .captions div, main .description .time-box .schedule .captions div {
+      main .time-box .wrapper .captions div {
         float: left;
         width: 25%;
         color: white;
         font: 25px "roboto-slab-regular";
         text-align: center; }
-      main .time-box .wrapper .elapsed, main .time-box .description .schedule .elapsed, main .description .time-box .schedule .elapsed {
+      main .time-box .wrapper .elapsed {
         color: white;
         font: 75px "roboto-light";
         vertical-align: middle;
         display: inline-block; }
-      main .time-box .wrapper .icon, main .time-box .description .schedule .icon, main .description .time-box .schedule .icon {
+      main .time-box .wrapper .icon {
         position: absolute;
         left: -82px;
         top: 376px; }
-        main .time-box .wrapper .icon:first-child, main .time-box .description .schedule .icon:first-child, main .description .time-box .schedule .icon:first-child {
+        main .time-box .wrapper .icon:first-child {
           z-index: 6; }
   main .description-short {
     position: relative;
+    margin: 56px auto 142px;
     padding-right: 500px;
-    box-sizing: border-box;
-    margin: 56px auto 142px; }
+    box-sizing: border-box; }
     main .description-short h1 {
+      margin-bottom: 25px;
       color: #242424;
-      font: 50px "roboto-black";
-      margin-bottom: 24px; }
+      font: 50px "roboto-black"; }
     main .description-short > p {
+      margin-bottom: 20px;
       color: #242424;
-      font: 14px "roboto-light";
-      margin-bottom: 20px; }
+      font: 14px "roboto-light"; }
       main .description-short > p:last-child {
-        margin-bottom: 142px; }
-  main .description form {
-    position: absolute;
-    z-index: 10;
-    top: -228px;
-    right: 0;
-    width: 430px;
-    height: auto;
-    background-color: #fff;
-    float: left;
-    text-align: center;
-    border: solid 1px #dbdada;
-    padding-bottom: 21px; }
-    main .description form::after {
-      display: block;
-      content: "";
+        margin-bottom: 140px; }
+    main .description-short #regBox {
       position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 3px;
-      background-color: #949293;
-      float: left; }
-    main .description form h2 {
-      color: #252525;
-      font: 30px roboto-bold;
-      margin: 34px 0 21px; }
-    main .description form input {
-      color: #6c6c6c;
-      width: 375px;
-      height: 58px;
-      font: 19px roboto-light;
-      border-radius: 5px;
-      border: solid 1px #bebebe;
-      box-sizing: border-box;
-      outline: none;
-      padding: 0 15px;
-      margin-bottom: 20px; }
-      main .description form input:last-child {
-        margin-bottom: 40px; }
-    main .description form button {
-      color: #fff;
-      width: 371px;
-      height: 58px;
-      font: 22px roboto-bold;
-      border-radius: 5px;
-      border: solid 1px #bebebe;
-      box-sizing: border-box;
-      outline: none;
-      border: none;
-      outline: none;
-      background-color: #90d23d;
-      margin-bottom: 21px; }
-      main .description form button:hover {
-        background-color: #4a454b; }
-    main .description form p {
-      color: #6c6c6c;
-      font: 15px roboto-light; }
+      top: -228px;
+      right: 0;
+      z-index: 10;
+      width: 430px;
+      height: auto;
+      background-color: #fff;
+      float: left;
+      padding-bottom: 21px;
+      border: solid 1px #dbdada;
+      text-align: center; }
+      main .description-short #regBox::after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #949293;
+        float: left; }
+      main .description-short #regBox h2 {
+        margin: 34px 0 21px;
+        color: #252525;
+        font: 30px roboto-bold; }
+      main .description-short #regBox input {
+        color: #6c6c6c;
+        width: 375px;
+        height: 58px;
+        font: 19px roboto-light;
+        border-radius: 5px;
+        border: solid 1px #bebebe;
+        box-sizing: border-box;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 0 15px; }
+        main .description-short #regBox input:last-child {
+          margin-bottom: 40px; }
+      main .description-short #regBox button {
+        color: #fff;
+        width: 371px;
+        height: 58px;
+        font: 22px roboto-bold;
+        border-radius: 5px;
+        border: solid 1px #bebebe;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        outline: none;
+        background-color: #90d23d;
+        margin-bottom: 21px; }
+        main .description-short #regBox button:hover {
+          background-color: #4a454b; }
+      main .description-short #regBox p {
+        color: #6c6c6c;
+        font: 15px roboto-light; }
   main .description .event-details {
     margin-bottom: 94px; }
     main .description .event-details .event-detail {
@@ -199,65 +200,67 @@ main {
       main .description .event-details .event-detail:last-child {
         margin-right: 0; }
       main .description .event-details .event-detail figure {
-        margin: 0 auto;
-        text-align: center;
         height: 220px;
-        overflow: hidden; }
+        margin: 0 auto;
+        overflow: hidden;
+        text-align: center; }
       main .description .event-details .event-detail h3 {
-        color: #242424;
-        font: 35px roboto-black;
         margin: 20px auto 10px;
-        text-align: center; }
-      main .description .event-details .event-detail p {
+        text-align: center;
         color: #242424;
-        font: 14px roboto-light;
-        text-align: center; }
+        font: 35px roboto-black; }
+      main .description .event-details .event-detail p {
+        text-align: center;
+        color: #242424;
+        font: 14px roboto-light; }
   main .description .schedule {
-    overflow: hidden;
-    border-radius: 15px; }
+    width: 100%;
+    overflow: hidden; }
     main .description .schedule tr {
-      height: 75px;
-      width: 1000px; }
-      main .description .schedule tr:nth-child(2n) {
-        background-color: #373737; }
-      main .description .schedule tr:nth-child(2n-1) {
-        background-color: #4b4d4f; }
-      main .description .schedule tr:first-child {
-        background-color: #90d23d; }
-        main .description .schedule tr:first-child td {
-          font: 30px roboto-black; }
-      main .description .schedule tr:hover {
-        background-color: #90d23d; }
+      height: 75px; }
       main .description .schedule tr td {
-        color: #fff;
-        font: 22px "roboto-regular";
-        box-sizing: border-box;
         vertical-align: middle;
         text-align: center; }
-        main .description .schedule tr td:first-of-type {
+        main .description .schedule tr td:first-child {
           width: 200px; }
         main .description .schedule tr td:nth-child(2) {
-          text-align: left;
-          padding-left: 70px; }
+          padding-left: 70px;
+          box-sizing: border-box;
+          text-align: left; }
         main .description .schedule tr td:last-child {
           width: 130px; }
-        main .description .schedule tr td button {
-          color: #4a454b;
-          width: 33px;
-          height: 33px;
-          font: 22px "roboto-regular";
-          border-radius: 50%;
-          border: solid 1px #bebebe;
-          box-sizing: border-box;
-          outline: none;
-          border: none;
-          outline: none;
-          background-color: #fff;
-          font: 22px roboto-black; }
-          main .description .schedule tr td button:hover {
-            background-color: #4a454b; }
-          main .description .schedule tr td button:hover {
-            color: #fff; }
+    main .description .schedule thead tr {
+      background-color: #90d23d; }
+      main .description .schedule thead tr td {
+        text-align: center;
+        color: #fff;
+        font: 30px roboto-black; }
+    main .description .schedule tbody tr:nth-child(2n) {
+      background-color: #373737; }
+    main .description .schedule tbody tr:nth-child(2n-1) {
+      background-color: #4b4d4f; }
+    main .description .schedule tbody tr:hover {
+      background-color: #90d23d; }
+    main .description .schedule tbody tr td {
+      color: #fff;
+      font: 22px "roboto-regular"; }
+      main .description .schedule tbody tr td button {
+        color: #4a454b;
+        width: 33px;
+        height: 33px;
+        font: 22px "roboto-regular";
+        border-radius: 50%;
+        border: solid 1px #bebebe;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        font: 22px roboto-black; }
+        main .description .schedule tbody tr td button:hover {
+          background-color: #4a454b; }
+        main .description .schedule tbody tr td button:hover {
+          color: #fff; }
     main .description .schedule caption {
       color: #242424;
       font: 14px roboto-light;
@@ -265,28 +268,29 @@ main {
       text-align: center;
       width: 830px;
       margin: 40px auto 80px; }
-  main .description .elite-reward {
+  main .elite-reward {
     background-color: #4b4d4f; }
-    main .description .elite-reward .wrapper, main .description .elite-reward .schedule {
-      margin-right: 165px;
+    main .elite-reward .wrapper {
+      position: relative;
       width: 700px;
-      text-align: right;
-      position: relative; }
-      main .description .elite-reward .wrapper img, main .description .elite-reward .schedule img {
+      margin-right: 165px;
+      text-align: right; }
+      main .elite-reward .wrapper img {
         position: absolute;
         top: 0px;
         left: -355px; }
-      main .description .elite-reward .wrapper h1, main .description .elite-reward .schedule h1 {
+      main .elite-reward .wrapper h2 {
+        padding: 175px 0 40px;
         color: #fff;
-        font: 50px "roboto-black";
-        padding: 175px 0 38px; }
-      main .description .elite-reward .wrapper p, main .description .elite-reward .schedule p {
+        font: 50px "roboto-black"; }
+      main .elite-reward .wrapper p {
+        margin-bottom: 14px;
         color: #fff;
-        font: 14px "roboto-light";
-        margin-bottom: 14px; }
-        main .description .elite-reward .wrapper p:last-child, main .description .elite-reward .schedule p:last-child {
+        font: 14px "roboto-light"; }
+        main .elite-reward .wrapper p:last-child {
           margin-bottom: 0; }
-      main .description .elite-reward .wrapper button, main .description .elite-reward .schedule button {
+      main .elite-reward .wrapper button {
+        margin: 40px auto 175px;
         color: #fff;
         width: 200px;
         height: 55px;
@@ -297,56 +301,36 @@ main {
         outline: none;
         border: none;
         outline: none;
-        background-color: #90d23d;
-        margin: 38px auto 175px; }
-        main .description .elite-reward .wrapper button:hover, main .description .elite-reward .schedule button:hover {
+        background-color: #90d23d; }
+        main .elite-reward .wrapper button:hover {
           background-color: #4a454b; }
   main .speakers {
-    padding: 146px 30px 0; }
-    main .speakers-info h1 {
+    padding: 50px 30px 0; }
+    main .speakers-info h2 {
+      margin-bottom: 25px;
       color: #242424;
-      font: 50px "roboto-black";
-      margin-bottom: 27px; }
+      font: 50px "roboto-black"; }
     main .speakers-info p {
-      color: #242424;
-      font: 14px roboto-light;
       width: 520px;
-      margin-bottom: 62px; }
+      margin-bottom: 60px;
+      color: #242424;
+      font: 14px roboto-light; }
     main .speakers-list .speaker {
+      position: relative;
       width: 296px;
       height: 296px;
       background-color: #90d23d;
       float: left;
-      box-sizing: border-box;
-      margin: 0 41px 41px 0;
+      margin: 0 40px 40px 0;
       padding: 30px 60px 0 30px;
-      border-radius: 15px;
-      position: relative; }
-      main .speakers-list .speaker h3 {
-        color: #fff;
-        font: 45px "roboto-black";
-        line-height: 1;
-        margin-bottom: 21px; }
-      main .speakers-list .speaker span {
-        color: #fff;
-        font: 18px "roboto-medium"; }
-      main .speakers-list .speaker-links {
-        margin-top: 55px; }
-        main .speakers-list .speaker-links a {
-          margin-right: 8px; }
-          main .speakers-list .speaker-links a i::before {
-            color: #fff;
-            font-size: 35px; }
-          main .speakers-list .speaker-links a:hover i::before {
-            color: #4a454b; }
-          main .speakers-list .speaker-links a:last-child {
-            margin-right: 0; }
-      main .speakers-list .speaker::after {
+      box-sizing: border-box;
+      border-radius: 15px; }
+      main .speakers-list .speaker:not(:nth-child(5))::after {
         display: block;
         content: "";
         position: absolute;
-        top: 127px;
-        left: 32px;
+        top: 125px;
+        left: 30px;
         width: 83px;
         height: 6px;
         background-color: #fff;
@@ -357,29 +341,47 @@ main {
         background-image: url("D:/Portfolio/Envato/img/bg.png"); }
       main .speakers-list .speaker:nth-child(5) {
         background: transparent url("D:/Portfolio/Envato/img/hand.png") 50% 50% no-repeat; }
-        main .speakers-list .speaker:nth-child(5)::after {
-          display: none; }
+      main .speakers-list .speaker-name {
+        margin-bottom: 20px;
+        color: #fff;
+        font: 45px "roboto-black";
+        line-height: 1; }
+      main .speakers-list .speaker-description {
+        color: #fff;
+        font: 18px "roboto-medium"; }
+      main .speakers-list .speaker-links {
+        margin-top: 55px; }
+        main .speakers-list .speaker-links a {
+          margin-right: 8px; }
+          main .speakers-list .speaker-links a:last-child {
+            margin-right: 0; }
+          main .speakers-list .speaker-links a::before {
+            font-size: 35px;
+            color: #fff; }
+          main .speakers-list .speaker-links a:hover::before {
+            color: #4a454b; }
   main .sponsors {
     background-color: #4b4d4f; }
-    main .sponsors .wrapper, main .sponsors .description .schedule, main .description .sponsors .schedule {
-      text-align: center;
-      padding-top: 170px; }
-      main .sponsors .wrapper h1, main .sponsors .description .schedule h1, main .description .sponsors .schedule h1 {
+    main .sponsors .wrapper {
+      padding-top: 170px;
+      text-align: center; }
+      main .sponsors .wrapper h1 {
+        margin-bottom: 30px;
         color: #fff;
-        font: 50px roboto-black;
-        margin-bottom: 30px; }
-      main .sponsors .wrapper p, main .sponsors .description .schedule p, main .description .sponsors .schedule p {
+        font: 50px roboto-black; }
+      main .sponsors .wrapper p {
         color: #fff;
         font: 14px roboto-light; }
-        main .sponsors .wrapper p:last-of-type, main .sponsors .description .schedule p:last-of-type, main .description .sponsors .schedule p:last-of-type {
+        main .sponsors .wrapper p:last-of-type {
           margin-bottom: 48px; }
-      main .sponsors .wrapper .sponsors-links, main .sponsors .description .schedule .sponsors-links, main .description .sponsors .schedule .sponsors-links {
+      main .sponsors .wrapper .sponsors-links {
         margin-bottom: 40px; }
-        main .sponsors .wrapper .sponsors-links img, main .sponsors .description .schedule .sponsors-links img, main .description .sponsors .schedule .sponsors-links img {
+        main .sponsors .wrapper .sponsors-links img {
           margin-right: 85px; }
-          main .sponsors .wrapper .sponsors-links img:last-child, main .sponsors .description .schedule .sponsors-links img:last-child, main .description .sponsors .schedule .sponsors-links img:last-child {
+          main .sponsors .wrapper .sponsors-links img:last-child {
             margin-right: 0; }
-      main .sponsors .wrapper button, main .sponsors .description .schedule button, main .description .sponsors .schedule button {
+      main .sponsors .wrapper button {
+        margin-bottom: 120px;
         color: #fff;
         width: 200px;
         height: 55px;
@@ -390,43 +392,41 @@ main {
         outline: none;
         border: none;
         outline: none;
-        background-color: #90d23d;
-        margin-bottom: 127px; }
-        main .sponsors .wrapper button:hover, main .sponsors .description .schedule button:hover, main .description .sponsors .schedule button:hover {
+        background-color: #90d23d; }
+        main .sponsors .wrapper button:hover {
           background-color: #4a454b; }
   main .past-events {
     padding-top: 117px; }
     main .past-events-description {
-      padding-left: 30px; }
-      main .past-events-description h1 {
+      margin-left: 30px; }
+      main .past-events-description h2 {
+        margin-bottom: 5px;
         color: #242424;
-        font: 50px roboto-black;
-        margin-bottom: 37px; }
+        font: 50px roboto-black; }
       main .past-events-description p {
         color: #4a454b;
         font: 14px roboto-light;
         width: 600px;
-        margin-bottom: 105px; }
+        margin-bottom: 40px; }
     main .past-events-list {
-      padding-left: 100px;
       text-align: center; }
-      main .past-events-list .event-1 {
-        width: 600px;
+      main .past-events-list .event:first-child {
+        width: 60%;
         height: 416px;
         background-color: #3d6ed2;
         float: left; }
-      main .past-events-list .event-2 {
-        width: 570px;
+      main .past-events-list .event:nth-child(2) {
+        width: 40%;
         height: 416px;
         background-color: #90d23d;
         float: left; }
-      main .past-events-list .event-3 {
-        width: 500px;
+      main .past-events-list .event:nth-child(3) {
+        width: 35%;
         height: 368px;
         background-color: #ff9d00;
         float: left; }
-      main .past-events-list .event-4 {
-        width: 670px;
+      main .past-events-list .event:nth-child(4) {
+        width: 65%;
         height: 368px;
         background-color: #e0652a;
         float: left; }
@@ -445,28 +445,32 @@ main {
         background-color: #373737; }
         main .past-events-list button:hover {
           background-color: #90d23d; }
-  main .feedback {
+
+footer {
+  background-color: #90d23d;
+  text-align: center; }
+  footer .feedback-section {
     position: relative;
     height: 670px; }
-    main .feedback-form {
-      background-color: #fff;
-      width: 970px;
+    footer .feedback-section .feedback {
       position: absolute;
       left: 200px;
-      top: 70px; }
-      main .feedback-form-info {
+      top: 70px;
+      width: 970px;
+      background-color: #fff; }
+      footer .feedback-section .feedback-info {
         width: 470px;
         height: 530px;
         background-color: #fff;
         float: left;
-        background: url("D:/Portfolio/Envato/img/adress.png") 50% 25% no-repeat;
-        text-align: center; }
-        main .feedback-form-info .adress {
-          color: #4a454b;
-          font: 18px roboto-light;
+        text-align: center;
+        background: url("D:/Portfolio/Envato/img/adress.png") 50% 25% no-repeat; }
+        footer .feedback-section .feedback-info .adress {
           width: 270px;
-          margin: 285px auto 16px; }
-        main .feedback-form-info button {
+          margin: 285px auto 16px;
+          color: #4a454b;
+          font: 18px roboto-light; }
+        footer .feedback-section .feedback-info #minimize {
           color: #fff;
           width: 200px;
           height: 55px;
@@ -478,9 +482,9 @@ main {
           border: none;
           outline: none;
           background-color: #90d23d; }
-          main .feedback-form-info button:hover {
+          footer .feedback-section .feedback-info #minimize:hover {
             background-color: #4a454b; }
-      main .feedback-form #feedback {
+      footer .feedback-section .feedback #feedback-form {
         width: 500px;
         height: 530px;
         background-color: #fff;
@@ -488,7 +492,7 @@ main {
         padding-top: 59px;
         box-sizing: border-box;
         text-align: center; }
-        main .feedback-form #feedback input[type='email'], main .feedback-form #feedback textarea {
+        footer .feedback-section .feedback #feedback-form input[type='email'], footer .feedback-section .feedback #feedback-form textarea {
           color: #4a454b;
           width: 400px;
           height: 55px;
@@ -499,10 +503,10 @@ main {
           outline: none;
           padding: 0 20px;
           margin: 0 auto 28px; }
-        main .feedback-form #feedback textarea {
+        footer .feedback-section .feedback #feedback-form textarea {
           height: 255px;
           padding-top: 15px; }
-        main .feedback-form #feedback button {
+        footer .feedback-section .feedback #feedback-form button {
           color: #fff;
           width: 400px;
           height: 60px;
@@ -514,25 +518,41 @@ main {
           border: none;
           outline: none;
           background-color: #373737; }
-          main .feedback-form #feedback button:hover {
+          footer .feedback-section .feedback #feedback-form button:hover {
             background-color: #90d23d; }
-
-footer {
-  background-color: #90d23d;
-  text-align: center; }
   footer .social {
-    padding: 60px 0 34px 0; }
-    footer .social a {
-      margin-right: 16px; }
-      footer .social a i::before {
-        color: #fff;
-        font-size: 45px; }
-      footer .social a:hover i::before {
-        color: #4a454b; }
-      footer .social a:last-child {
-        margin-right: 0; }
-  footer p {
-    color: #fff;
-    font: 18px roboto-light; }
-    footer p:last-child {
-      padding-bottom: 42px; }
+    padding: 60px 0 15px 0; }
+    footer .social .links {
+      margin-bottom: 15px; }
+      footer .social .links a {
+        margin-right: 16px; }
+        footer .social .links a:last-child {
+          margin-right: 0; }
+        footer .social .links a::before {
+          color: #fff;
+          font-size: 45px; }
+        footer .social .links a:hover::before {
+          color: #4a454b; }
+    footer .social small {
+      display: block;
+      margin: 0 auto;
+      color: #fff;
+      font: 18px roboto-light; }
+      footer .social small:last-child {
+        padding-bottom: 42px; }
+
+.err-msg {
+  width: 200px;
+  left: -220px;
+  top: 0;
+  position: absolute;
+  background-color: white; }
+  .err-msg label {
+    padding: 5px;
+    display: block;
+    color: red;
+    font: 20px Roboto-Light;
+    text-align: left; }
+
+textarea.error, input.error {
+  background-color: #ff7d7d; }
