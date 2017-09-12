@@ -46,4 +46,21 @@ $(document).ready(function () {
 	$('#scrollBtn').on('click', function() {
 		$('body').animate({scrollTop: 0}, 1000);
 	});
+
+
+	$('#minimize').on('click', function() {
+		$(this).parents('.feedback').animate({
+			opacity: 0
+		}, 500, 'swing', function() {
+			$(this).hide();
+			$('#restore').show().animate({top: 0}, 500, 'swing')
+		})
+	});
+
+	$('#restore').on('click', function() {
+		$('#restore').animate({top: '-55'}, 500, 'swing', function() {
+			$(this).hide();
+			$('.feedback').show().animate({opacity: 1}, 500, 'swing')
+		}
+	)})
 });
