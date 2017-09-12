@@ -493,8 +493,9 @@ main {
 }
 
 footer {
-    background-color: $green;
     text-align: center;
+    overflow: hidden;
+    background-color: $green;
     
     .feedback-section {
         position: relative;
@@ -506,7 +507,7 @@ footer {
             top: 70px;
             width: 970px;
             background-color: $white;
-        
+
             &-info {
                 @include block(470px, 530px, $white);
                 text-align: center;
@@ -547,6 +548,16 @@ footer {
                     @include button(#373737, $green);
                 }
             }
+        }
+
+        #restore {
+            display: none;
+            position: absolute;
+            top: -55px;
+            left: 50%;
+            margin-left: -100px;
+            @include input($white, 200px, 55px, 22px roboto-regular, 15px);
+            @include button($green, $gray);
         }
     }
 

@@ -447,8 +447,9 @@ main {
           background-color: #90d23d; }
 
 footer {
-  background-color: #90d23d;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden;
+  background-color: #90d23d; }
   footer .feedback-section {
     position: relative;
     height: 670px; }
@@ -520,6 +521,25 @@ footer {
           background-color: #373737; }
           footer .feedback-section .feedback #feedback-form button:hover {
             background-color: #90d23d; }
+    footer .feedback-section #restore {
+      display: none;
+      position: absolute;
+      top: -55px;
+      left: 50%;
+      margin-left: -100px;
+      color: #fff;
+      width: 200px;
+      height: 55px;
+      font: 22px roboto-regular;
+      border-radius: 15px;
+      border: solid 1px #bebebe;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      outline: none;
+      background-color: #90d23d; }
+      footer .feedback-section #restore:hover {
+        background-color: #4a454b; }
   footer .social {
     padding: 60px 0 15px 0; }
     footer .social .links {
