@@ -2,11 +2,11 @@ $(document).ready(function () {
 	$(window).on("scroll", function onScroll() {
 		var scrollPosition = $(document).scrollTop();
 	
-		$('#menu a').on('click', function (e) {
+		$('#main-menu a').on('click', function (e) {
 			e.preventDefault();
 			$(document).off("scroll");
 			
-			$('#menu a').each(function () {
+			$('#main-menu a').each(function () {
 				$(this).removeClass('active');
 			});
 			$(this).addClass('active');
@@ -22,12 +22,12 @@ $(document).ready(function () {
 			});
 		})
 
-		$('#menu a').each(function () {
+		$('#main-menu a').each(function () {
 			var currentLink = $(this);
 			var refElement = $(currentLink.attr("href"));
 			
 			if(refElement.offset().top <= scrollPosition && refElement.offset().top + refElement.height() > scrollPosition) {
-				$('#menu a').removeClass("active");
+				$('#main-menu a').removeClass("active");
 				currentLink.addClass("active");
 			} else {
 				currentLink.removeClass("active");
