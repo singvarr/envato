@@ -13,6 +13,4 @@ $(document).ready(function() {
 	move(2, '-=25', '+=262');
 	move(3, '-=36', '+=398');
 	move(4, '-=45', '+=531');
-
-	$('.time-box::after').css()
 })
