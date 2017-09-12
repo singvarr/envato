@@ -1,44 +1,3 @@
-.wrapper {
-  margin: 0 auto;
-  width: 1030px; }
-
-.clearfix::after {
-  display: table;
-  content: "";
-  clear: both; }
-
-#scrollBtn {
-  position: fixed;
-  display: none;
-  right: 165px;
-  bottom: 100px;
-  opacity: 0.4;
-  cursor: pointer;
-  font-size: 60px; }
-  #scrollBtn:hover {
-    opacity: 1; }
-  #scrollBtn i::before {
-    font-size: 40px; }
-
-a {
-  text-decoration: none; }
-
-.err-msg {
-  width: 200px;
-  left: -220px;
-  top: 0;
-  position: absolute;
-  background-color: white; }
-  .err-msg label {
-    padding: 5px;
-    display: block;
-    color: red;
-    font: 20px Roboto-Light;
-    text-align: left; }
-
-textarea.error, input.error {
-  background-color: #ff7d7d; }
-
 header {
   position: fixed;
   top: 0;
@@ -70,9 +29,18 @@ main {
   padding-top: 130px; }
   main .time-box {
     position: relative;
+    overflow: hidden;
     background-color: #4a454b; }
     main .time-box::after {
-      position: absolute; }
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -330px;
+      z-index: 10;
+      width: 100%;
+      height: 400px;
+      transform: skewY(-5deg);
+      background-color: white; }
     main .time-box .wrapper {
       position: relative;
       padding: 100px 0 400px;
@@ -98,7 +66,7 @@ main {
             width: 25%;
             height: 110px;
             color: #fff;
-            font: 110px "roboto-slab-thin";
+            font: 100px "roboto-slab-thin";
             text-align: center;
             vertical-align: middle; }
       main .time-box .wrapper .captions div {
@@ -115,7 +83,7 @@ main {
       main .time-box .wrapper .icon {
         position: absolute;
         left: -82px;
-        top: 376px; }
+        top: 520px; }
         main .time-box .wrapper .icon:first-child {
           z-index: 6; }
   main .description-short {
@@ -269,7 +237,21 @@ main {
       width: 830px;
       margin: 40px auto 80px; }
   main .elite-reward {
+    position: relative;
+    overflow: hidden;
     background-color: #4b4d4f; }
+    main .elite-reward::before, main .elite-reward::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 100%;
+      height: 400px;
+      transform: skewY(-5deg);
+      background-color: white; }
+    main .elite-reward::after {
+      bottom: -330px; }
+    main .elite-reward::before {
+      top: -330px; }
     main .elite-reward .wrapper {
       position: relative;
       width: 700px;
@@ -361,11 +343,25 @@ main {
           main .speakers-list .speaker-links a:hover::before {
             color: #4a454b; }
   main .sponsors {
+    position: relative;
+    overflow: hidden;
     background-color: #4b4d4f; }
+    main .sponsors::before, main .sponsors::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 100%;
+      height: 400px;
+      transform: skewY(-5deg);
+      background-color: white; }
+    main .sponsors::after {
+      bottom: -330px; }
+    main .sponsors::before {
+      top: -330px; }
     main .sponsors .wrapper {
       padding-top: 170px;
       text-align: center; }
-      main .sponsors .wrapper h1 {
+      main .sponsors .wrapper h2 {
         margin-bottom: 30px;
         color: #fff;
         font: 50px roboto-black; }
@@ -561,18 +557,32 @@ footer {
       footer .social small:last-child {
         padding-bottom: 42px; }
 
-.err-msg {
-  width: 200px;
-  left: -220px;
-  top: 0;
-  position: absolute;
-  background-color: white; }
-  .err-msg label {
-    padding: 5px;
-    display: block;
-    color: red;
-    font: 20px Roboto-Light;
-    text-align: left; }
+.wrapper {
+  margin: 0 auto;
+  width: 1030px; }
 
-textarea.error, input.error {
-  background-color: #ff7d7d; }
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both; }
+
+a {
+  text-decoration: none; }
+
+#scrollBtn {
+  position: fixed;
+  display: none;
+  right: 165px;
+  bottom: 100px;
+  opacity: 0.4;
+  cursor: pointer;
+  font-size: 60px; }
+  #scrollBtn:hover {
+    opacity: 1; }
+  #scrollBtn::before {
+    font-size: 40px; }
+
+.error {
+  border: solid 1px red !important; }
+  .error::placeholder {
+    color: red; }
