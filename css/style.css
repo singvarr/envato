@@ -30,7 +30,7 @@ main {
     background-color: #4a454b; }
     main .time-box::after {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       bottom: -330px;
       z-index: 10;
@@ -43,35 +43,38 @@ main {
       padding: 100px 0 400px;
       box-sizing: border-box; }
       main .time-box .wrapper #countdown {
-        width: 970px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 200px;
-        background-color: #4a454b;
-        float: none;
-        margin: 0 auto;
         padding: 25px 0;
         box-sizing: border-box;
         border: 2px solid #90d23d;
+        background-color: #4a454b;
         border-radius: 20px; }
         main .time-box .wrapper #countdown .digits {
+          display: flex;
+          gap: 70px;
+          justify-content: space-between;
           padding-bottom: 10px;
           font-size: 0; }
           main .time-box .wrapper #countdown .digits #days,
           main .time-box .wrapper #countdown .digits #hours,
           main .time-box .wrapper #countdown .digits #min,
           main .time-box .wrapper #countdown .digits #sec {
-            display: inline-block;
-            width: 25%;
-            height: 110px;
             color: #fff;
             font: 100px "roboto-slab-thin";
             text-align: center;
             vertical-align: middle; }
-      main .time-box .wrapper .captions div {
-        float: left;
-        width: 25%;
-        color: white;
-        font: 25px "roboto-slab-regular";
-        text-align: center; }
+          main .time-box .wrapper #countdown .digits .caption {
+            color: white;
+            font: 25px "roboto-slab-regular";
+            text-align: center; }
+          main .time-box .wrapper #countdown .digits li {
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            align-items: center; }
       main .time-box .wrapper .elapsed {
         color: white;
         font: 75px "roboto-light";
@@ -239,7 +242,7 @@ main {
     background-color: #4b4d4f; }
     main .elite-reward::before, main .elite-reward::after {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       width: 100%;
       height: 400px;
@@ -345,7 +348,7 @@ main {
     background-color: #4b4d4f; }
     main .sponsors::before, main .sponsors::after {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       width: 100%;
       height: 400px;
@@ -486,7 +489,7 @@ footer {
         padding-top: 59px;
         box-sizing: border-box;
         text-align: center; }
-        footer .feedback-section .feedback #feedback-form input[type='email'], footer .feedback-section .feedback #feedback-form textarea {
+        footer .feedback-section .feedback #feedback-form input[type="email"], footer .feedback-section .feedback #feedback-form textarea {
           color: #4a454b;
           width: 400px;
           height: 55px;
