@@ -3,27 +3,24 @@ header {
   top: 0;
   z-index: 1000;
   width: 100%;
-  height: 130px;
   background-color: #4a454b; }
-  header .logo {
-    float: left;
-    margin-top: 45px; }
-  header #main-menu {
-    float: right;
-    margin-top: 70px; }
-    header #main-menu ul {
-      font-size: 0; }
-      header #main-menu ul li {
-        display: inline-block;
-        margin-right: 45px; }
-        header #main-menu ul li:last-child {
-          margin-right: 0; }
-        header #main-menu ul li a {
-          display: block;
-          color: #fff;
-          font: 15px "roboto-thin"; }
-          header #main-menu ul li a:active, header #main-menu ul li a:hover {
-            color: #90d23d; }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px; }
+  header #main-menu ul {
+    display: flex;
+    font-size: 0;
+    margin: 0 -15px;
+    gap: 15px; }
+    header #main-menu ul li a {
+      display: block;
+      padding: 15px;
+      color: #fff;
+      font: 15px "roboto-thin"; }
+      header #main-menu ul li a:active, header #main-menu ul li a:hover {
+        color: #90d23d; }
 
 main {
   padding-top: 130px; }

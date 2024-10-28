@@ -5,31 +5,32 @@ header {
     top: 0;
     z-index: 1000;
     width: 100%;
+    
+    background-color: $gray; 
+    .wrapper{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 130px;
-    background-color: $gray;
-
-    .logo {
-        float: left; 
-        margin-top: 45px;
     }
 
+    .logo {
+       
+     }
+
     #main-menu {
-        float: right;
-        margin-top: 70px;
+    
+    
 
         ul {
+            display: flex;
             font-size: 0;
-
+            margin: 0 -15px;
+gap: 15px;
             li {
-                display: inline-block;
-                margin-right: 45px;
-                
-                &:last-child {
-                    margin-right: 0;
-                }
-
                 a {
                     display: block;
+                    padding: 15px;
                     @include text($white, 15px 'roboto-thin');
                 
                     &:active, &:hover {
@@ -51,7 +52,7 @@ main {
 
         &::after {
             position: absolute;
-            content: '';
+            content: ''; 
             left: 0;
             bottom: -330px;
             z-index: 10;
