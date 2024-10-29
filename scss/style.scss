@@ -123,9 +123,10 @@ main {
 
   .description {
     &-short {
-      position: relative;
+      display: flex;
+      gap: 50px;
+      justify-content: space-between;
       margin: 56px auto 142px;
-      padding-right: 500px;
       box-sizing: border-box;
 
       h1 {
@@ -133,32 +134,33 @@ main {
         @include text($text, 50px "roboto-black");
       }
 
-      & > p {
+      div > p {
         margin-bottom: 20px;
         @include text($text, 14px "roboto-light");
 
         &:last-child {
-          margin-bottom: 140px;
+          margin-bottom: 0;
         }
       }
 
       #regBox {
-        position: absolute;
-        top: -228px;
-        right: 0;
-        z-index: 10;
-        @include block(430px, auto, $white);
-        padding-bottom: 21px;
+        // @include block(430px, auto, $white);
+        position: relative;
+        z-index: 999;
+        width: 430px;
+        padding: 21px;
+        margin-top: -300px;
         border: solid 1px #dbdada;
         text-align: center;
+        background-color: $white;
 
-        &::after {
-          display: block;
-          position: absolute;
-          bottom: 0;
-          content: "";
-          @include block(100%, 3px, #949293);
-        }
+        // &::after {
+        //   display: block;
+        //   position: absolute;
+        //   bottom: 0;
+        //   content: "";
+        //   @include block(100%, 3px, #949293);
+        // }
 
         h2 {
           margin: 34px 0 21px;
@@ -188,20 +190,24 @@ main {
     }
 
     .event-details {
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
       margin-bottom: 94px;
 
       .event-detail {
-        @include block(300px);
-        margin-right: 60px;
+        // @include block(300px);
+        width: 300px;
+        // margin-right: 60px;
 
-        &:last-child {
-          margin-right: 0;
-        }
+        // &:last-child {
+        //   margin-right: 0;
+        // }
 
         figure {
           height: 220px;
           margin: 0 auto;
-          overflow: hidden;
+          // overflow: hidden;
           text-align: center;
         }
 
@@ -317,17 +323,19 @@ main {
     }
 
     .wrapper {
-      position: relative;
-      width: 700px;
-      margin-right: 165px;
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+      // width: 700px;
+      // margin-right: 165px;
       text-align: right;
-
-      img {
-        position: absolute;
-        top: 0px;
-        left: -355px;
+      & > div:last-child {
+        width: 700px;
       }
-
+      & > div:first-child > img {
+        position: relative;
+        z-index: 999;
+      }
       h2 {
         padding: 175px 0 40px;
         @include text($white, 50px "roboto-black");
