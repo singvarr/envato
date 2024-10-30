@@ -362,23 +362,29 @@ main {
     padding: 50px 30px 0;
 
     &-info {
+      margin-bottom: 60px;
       h2 {
-        margin-bottom: 25px;
         @include text($text, 50px "roboto-black");
+        margin-bottom: 25px;
       }
 
       p {
         width: 520px;
-        margin-bottom: 60px;
         @include text($text, 14px roboto-light);
       }
     }
 
     &-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
       .speaker {
         position: relative;
-        @include block(296px, 296px, $green);
-        margin: 0 40px 40px 0;
+        // @include block(296px, 296px, $green);
+        width: 296px;
+        height: 296px;
+        background-color: $green;
         padding: 30px 60px 0 30px;
         box-sizing: border-box;
         border-radius: 15px;
@@ -392,17 +398,16 @@ main {
           @include block(83px, 6px, $white);
         }
 
-        &:nth-of-type(3n) {
-          margin-right: 0;
-        }
+        // &:nth-of-type(3n) {
+        //   margin-right: 0;
+        // }
 
         &:nth-child(2) {
-          background-image: url("D:/Portfolio/Envato/img/bg.png");
+          background-image: url("../img/bg.png");
         }
 
         &:nth-child(5) {
-          background: transparent url("D:/Portfolio/Envato/img/hand.png") 50%
-            50% no-repeat;
+          background: transparent url("../img/hand.png") 50% 50% no-repeat;
         }
 
         &-name {
@@ -416,15 +421,11 @@ main {
         }
 
         &-links {
+          display: flex;
+          gap: 8px;
           margin-top: 55px;
 
           a {
-            margin-right: 8px;
-
-            &:last-child {
-              margin-right: 0;
-            }
-
             &::before {
               font-size: 35px;
               color: $white;
@@ -481,15 +482,11 @@ main {
       }
 
       .sponsors-links {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 85px;
         margin-bottom: 40px;
-
-        img {
-          margin-right: 85px;
-
-          &:last-child {
-            margin-right: 0;
-          }
-        }
       }
 
       button {

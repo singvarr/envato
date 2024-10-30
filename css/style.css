@@ -274,55 +274,55 @@ main {
           background-color: #4a454b; }
   main .speakers {
     padding: 50px 30px 0; }
-    main .speakers-info h2 {
-      margin-bottom: 25px;
-      color: #242424;
-      font: 50px "roboto-black"; }
-    main .speakers-info p {
-      width: 520px;
-      margin-bottom: 60px;
-      color: #242424;
-      font: 14px roboto-light; }
-    main .speakers-list .speaker {
-      position: relative;
-      width: 296px;
-      height: 296px;
-      background-color: #90d23d;
-      float: left;
-      margin: 0 40px 40px 0;
-      padding: 30px 60px 0 30px;
-      box-sizing: border-box;
-      border-radius: 15px; }
-      main .speakers-list .speaker:not(:nth-child(5))::after {
-        display: block;
-        content: "";
-        position: absolute;
-        top: 125px;
-        left: 30px;
-        width: 83px;
-        height: 6px;
-        background-color: #fff;
-        float: left; }
-      main .speakers-list .speaker:nth-of-type(3n) {
-        margin-right: 0; }
-      main .speakers-list .speaker:nth-child(2) {
-        background-image: url("D:/Portfolio/Envato/img/bg.png"); }
-      main .speakers-list .speaker:nth-child(5) {
-        background: transparent url("D:/Portfolio/Envato/img/hand.png") 50% 50% no-repeat; }
-      main .speakers-list .speaker-name {
-        margin-bottom: 20px;
-        color: #fff;
-        font: 45px "roboto-black";
-        line-height: 1; }
-      main .speakers-list .speaker-description {
-        color: #fff;
-        font: 18px "roboto-medium"; }
-      main .speakers-list .speaker-links {
-        margin-top: 55px; }
-        main .speakers-list .speaker-links a {
-          margin-right: 8px; }
-          main .speakers-list .speaker-links a:last-child {
-            margin-right: 0; }
+    main .speakers-info {
+      margin-bottom: 60px; }
+      main .speakers-info h2 {
+        color: #242424;
+        font: 50px "roboto-black";
+        margin-bottom: 25px; }
+      main .speakers-info p {
+        width: 520px;
+        color: #242424;
+        font: 14px roboto-light; }
+    main .speakers-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px; }
+      main .speakers-list .speaker {
+        position: relative;
+        width: 296px;
+        height: 296px;
+        background-color: #90d23d;
+        padding: 30px 60px 0 30px;
+        box-sizing: border-box;
+        border-radius: 15px; }
+        main .speakers-list .speaker:not(:nth-child(5))::after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 125px;
+          left: 30px;
+          width: 83px;
+          height: 6px;
+          background-color: #fff;
+          float: left; }
+        main .speakers-list .speaker:nth-child(2) {
+          background-image: url("../img/bg.png"); }
+        main .speakers-list .speaker:nth-child(5) {
+          background: transparent url("../img/hand.png") 50% 50% no-repeat; }
+        main .speakers-list .speaker-name {
+          margin-bottom: 20px;
+          color: #fff;
+          font: 45px "roboto-black";
+          line-height: 1; }
+        main .speakers-list .speaker-description {
+          color: #fff;
+          font: 18px "roboto-medium"; }
+        main .speakers-list .speaker-links {
+          display: flex;
+          gap: 8px;
+          margin-top: 55px; }
           main .speakers-list .speaker-links a::before {
             font-size: 35px;
             color: #fff; }
@@ -357,11 +357,11 @@ main {
         main .sponsors .wrapper p:last-of-type {
           margin-bottom: 48px; }
       main .sponsors .wrapper .sponsors-links {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 85px;
         margin-bottom: 40px; }
-        main .sponsors .wrapper .sponsors-links img {
-          margin-right: 85px; }
-          main .sponsors .wrapper .sponsors-links img:last-child {
-            margin-right: 0; }
       main .sponsors .wrapper button {
         margin-bottom: 120px;
         color: #fff;
