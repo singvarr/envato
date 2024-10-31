@@ -14,9 +14,6 @@ header {
     height: 130px;
   }
 
-  .logo {
-  }
-
   #main-menu {
     ul {
       display: flex;
@@ -154,14 +151,6 @@ main {
         text-align: center;
         background-color: $white;
 
-        // &::after {
-        //   display: block;
-        //   position: absolute;
-        //   bottom: 0;
-        //   content: "";
-        //   @include block(100%, 3px, #949293);
-        // }
-
         h2 {
           margin: 34px 0 21px;
           @include text(#252525, 30px roboto-bold);
@@ -196,18 +185,10 @@ main {
       margin-bottom: 94px;
 
       .event-detail {
-        // @include block(300px);
         width: 300px;
-        // margin-right: 60px;
-
-        // &:last-child {
-        //   margin-right: 0;
-        // }
-
         figure {
           height: 220px;
           margin: 0 auto;
-          // overflow: hidden;
           text-align: center;
         }
 
@@ -326,8 +307,6 @@ main {
       display: flex;
       gap: 40px;
       justify-content: space-between;
-      // width: 700px;
-      // margin-right: 165px;
       text-align: right;
       & > div:last-child {
         width: 700px;
@@ -381,7 +360,6 @@ main {
       gap: 40px;
       .speaker {
         position: relative;
-        // @include block(296px, 296px, $green);
         width: 296px;
         height: 296px;
         background-color: $green;
@@ -397,10 +375,6 @@ main {
           left: 30px;
           @include block(83px, 6px, $white);
         }
-
-        // &:nth-of-type(3n) {
-        //   margin-right: 0;
-        // }
 
         &:nth-child(2) {
           background-image: url("../img/bg.png");
@@ -498,47 +472,56 @@ main {
   }
 
   .past-events {
-    padding-top: 117px;
+    padding: 117px 0 87px;
 
     &-description {
-      margin-left: 30px;
+      margin-bottom: 40px;
 
       h2 {
-        margin-bottom: 5px;
+        margin-bottom: 25px;
         @include text($text, 50px roboto-black);
       }
 
       p {
         @include text($gray, 14px roboto-light);
         width: 600px;
-        margin-bottom: 40px;
       }
     }
 
     &-list {
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 98px;
 
       .event:first-child {
-        @include block(60%, 416px, #3d6ed2);
+        width: 60%;
+        height: 416px;
+        background-color: #3d6ed2;
       }
 
       .event:nth-child(2) {
-        @include block(40%, 416px, $green);
+        width: 40%;
+        height: 416px;
+        background-color: $green;
       }
 
       .event:nth-child(3) {
-        @include block(35%, 368px, #ff9d00);
+        width: 35%;
+        height: 368px;
+        background-color: #ff9d00;
       }
 
       .event:nth-child(4) {
-        @include block(65%, 368px, #e0652a);
+        width: 65%;
+        height: 368px;
+        background-color: #e0652a;
       }
-
-      button {
-        margin: 98px 0 87px 0;
-        @include input($white, 200px, 55px, 22px roboto-regular, 15px);
-        @include button(#373737, $green);
-      }
+    }
+    button {
+      margin: 0 auto;
+      @include input($white, 200px, 55px, 22px roboto-regular, 15px);
+      @include button(#373737, $green);
     }
   }
 }
@@ -556,13 +539,17 @@ footer {
       position: absolute;
       left: 200px;
       top: 70px;
+      display: flex;
       width: 970px;
       background-color: $white;
 
       &-info {
-        @include block(470px, 530px, $white);
+        width: 470px;
+        height: 530px;
+        background-color: $white;
+        //  block(470px, 530px, $white);
         text-align: center;
-        background: url("D:/Portfolio/Envato/img/adress.png") 50% 25% no-repeat;
+        background: url("../img/adress.png") 50% 25% no-repeat;
 
         .adress {
           width: 270px;
@@ -577,7 +564,9 @@ footer {
       }
 
       #feedback-form {
-        @include block(500px, 530px, $white);
+        width: 500px;
+        height: 530px;
+        background-color: $white;
         padding-top: 59px;
         box-sizing: border-box;
         text-align: center;
@@ -616,15 +605,12 @@ footer {
     padding: 60px 0 15px 0;
 
     .links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
       margin-bottom: 15px;
 
       a {
-        margin-right: 16px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
         &::before {
           color: $white;
           font-size: 45px;

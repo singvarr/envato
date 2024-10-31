@@ -378,55 +378,53 @@ main {
         main .sponsors .wrapper button:hover {
           background-color: #4a454b; }
   main .past-events {
-    padding-top: 117px; }
+    padding: 117px 0 87px; }
     main .past-events-description {
-      margin-left: 30px; }
+      margin-bottom: 40px; }
       main .past-events-description h2 {
-        margin-bottom: 5px;
+        margin-bottom: 25px;
         color: #242424;
         font: 50px roboto-black; }
       main .past-events-description p {
         color: #4a454b;
         font: 14px roboto-light;
-        width: 600px;
-        margin-bottom: 40px; }
+        width: 600px; }
     main .past-events-list {
-      text-align: center; }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 98px; }
       main .past-events-list .event:first-child {
         width: 60%;
         height: 416px;
-        background-color: #3d6ed2;
-        float: left; }
+        background-color: #3d6ed2; }
       main .past-events-list .event:nth-child(2) {
         width: 40%;
         height: 416px;
-        background-color: #90d23d;
-        float: left; }
+        background-color: #90d23d; }
       main .past-events-list .event:nth-child(3) {
         width: 35%;
         height: 368px;
-        background-color: #ff9d00;
-        float: left; }
+        background-color: #ff9d00; }
       main .past-events-list .event:nth-child(4) {
         width: 65%;
         height: 368px;
-        background-color: #e0652a;
-        float: left; }
-      main .past-events-list button {
-        margin: 98px 0 87px 0;
-        color: #fff;
-        width: 200px;
-        height: 55px;
-        font: 22px roboto-regular;
-        border-radius: 15px;
-        border: solid 1px #bebebe;
-        box-sizing: border-box;
-        outline: none;
-        border: none;
-        outline: none;
-        background-color: #373737; }
-        main .past-events-list button:hover {
-          background-color: #90d23d; }
+        background-color: #e0652a; }
+    main .past-events button {
+      margin: 0 auto;
+      color: #fff;
+      width: 200px;
+      height: 55px;
+      font: 22px roboto-regular;
+      border-radius: 15px;
+      border: solid 1px #bebebe;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      outline: none;
+      background-color: #373737; }
+      main .past-events button:hover {
+        background-color: #90d23d; }
 
 footer {
   text-align: center;
@@ -439,15 +437,15 @@ footer {
       position: absolute;
       left: 200px;
       top: 70px;
+      display: flex;
       width: 970px;
       background-color: #fff; }
       footer .feedback-section .feedback-info {
         width: 470px;
         height: 530px;
         background-color: #fff;
-        float: left;
         text-align: center;
-        background: url("D:/Portfolio/Envato/img/adress.png") 50% 25% no-repeat; }
+        background: url("../img/adress.png") 50% 25% no-repeat; }
         footer .feedback-section .feedback-info .adress {
           width: 270px;
           margin: 285px auto 16px;
@@ -471,7 +469,6 @@ footer {
         width: 500px;
         height: 530px;
         background-color: #fff;
-        float: left;
         padding-top: 59px;
         box-sizing: border-box;
         text-align: center; }
@@ -525,16 +522,15 @@ footer {
   footer .social {
     padding: 60px 0 15px 0; }
     footer .social .links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
       margin-bottom: 15px; }
-      footer .social .links a {
-        margin-right: 16px; }
-        footer .social .links a:last-child {
-          margin-right: 0; }
-        footer .social .links a::before {
-          color: #fff;
-          font-size: 45px; }
-        footer .social .links a:hover::before {
-          color: #4a454b; }
+      footer .social .links a::before {
+        color: #fff;
+        font-size: 45px; }
+      footer .social .links a:hover::before {
+        color: #4a454b; }
     footer .social small {
       display: block;
       margin: 0 auto;
