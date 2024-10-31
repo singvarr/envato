@@ -3,27 +3,24 @@ header {
   top: 0;
   z-index: 1000;
   width: 100%;
-  height: 130px;
   background-color: #4a454b; }
-  header .logo {
-    float: left;
-    margin-top: 45px; }
-  header #main-menu {
-    float: right;
-    margin-top: 70px; }
-    header #main-menu ul {
-      font-size: 0; }
-      header #main-menu ul li {
-        display: inline-block;
-        margin-right: 45px; }
-        header #main-menu ul li:last-child {
-          margin-right: 0; }
-        header #main-menu ul li a {
-          display: block;
-          color: #fff;
-          font: 15px "roboto-thin"; }
-          header #main-menu ul li a:active, header #main-menu ul li a:hover {
-            color: #90d23d; }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px; }
+  header #main-menu ul {
+    display: flex;
+    font-size: 0;
+    margin: 0 -15px;
+    gap: 15px; }
+    header #main-menu ul li a {
+      display: block;
+      padding: 15px;
+      color: #fff;
+      font: 15px "roboto-thin"; }
+      header #main-menu ul li a:active, header #main-menu ul li a:hover {
+        color: #90d23d; }
 
 main {
   padding-top: 130px; }
@@ -33,7 +30,7 @@ main {
     background-color: #4a454b; }
     main .time-box::after {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       bottom: -330px;
       z-index: 10;
@@ -46,35 +43,38 @@ main {
       padding: 100px 0 400px;
       box-sizing: border-box; }
       main .time-box .wrapper #countdown {
-        width: 970px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 200px;
-        background-color: #4a454b;
-        float: none;
-        margin: 0 auto;
         padding: 25px 0;
         box-sizing: border-box;
         border: 2px solid #90d23d;
+        background-color: #4a454b;
         border-radius: 20px; }
         main .time-box .wrapper #countdown .digits {
+          display: flex;
+          gap: 70px;
+          justify-content: space-between;
           padding-bottom: 10px;
           font-size: 0; }
           main .time-box .wrapper #countdown .digits #days,
           main .time-box .wrapper #countdown .digits #hours,
           main .time-box .wrapper #countdown .digits #min,
           main .time-box .wrapper #countdown .digits #sec {
-            display: inline-block;
-            width: 25%;
-            height: 110px;
             color: #fff;
             font: 100px "roboto-slab-thin";
             text-align: center;
             vertical-align: middle; }
-      main .time-box .wrapper .captions div {
-        float: left;
-        width: 25%;
-        color: white;
-        font: 25px "roboto-slab-regular";
-        text-align: center; }
+          main .time-box .wrapper #countdown .digits .caption {
+            color: white;
+            font: 25px "roboto-slab-regular";
+            text-align: center; }
+          main .time-box .wrapper #countdown .digits li {
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            align-items: center; }
       main .time-box .wrapper .elapsed {
         color: white;
         font: 75px "roboto-light";
@@ -87,41 +87,30 @@ main {
         main .time-box .wrapper .icon:first-child {
           z-index: 6; }
   main .description-short {
-    position: relative;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
     margin: 56px auto 142px;
-    padding-right: 500px;
     box-sizing: border-box; }
     main .description-short h1 {
       margin-bottom: 25px;
       color: #242424;
       font: 50px "roboto-black"; }
-    main .description-short > p {
+    main .description-short div > p {
       margin-bottom: 20px;
       color: #242424;
       font: 14px "roboto-light"; }
-      main .description-short > p:last-child {
-        margin-bottom: 140px; }
+      main .description-short div > p:last-child {
+        margin-bottom: 0; }
     main .description-short #regBox {
-      position: absolute;
-      top: -228px;
-      right: 0;
-      z-index: 10;
+      position: relative;
+      z-index: 999;
       width: 430px;
-      height: auto;
-      background-color: #fff;
-      float: left;
-      padding-bottom: 21px;
+      padding: 21px;
+      margin-top: -300px;
       border: solid 1px #dbdada;
-      text-align: center; }
-      main .description-short #regBox::after {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        content: "";
-        width: 100%;
-        height: 3px;
-        background-color: #949293;
-        float: left; }
+      text-align: center;
+      background-color: #fff; }
       main .description-short #regBox h2 {
         margin: 34px 0 21px;
         color: #252525;
@@ -158,19 +147,15 @@ main {
         color: #6c6c6c;
         font: 15px roboto-light; }
   main .description .event-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
     margin-bottom: 94px; }
     main .description .event-details .event-detail {
-      width: 300px;
-      height: auto;
-      background-color: transparent;
-      float: left;
-      margin-right: 60px; }
-      main .description .event-details .event-detail:last-child {
-        margin-right: 0; }
+      width: 300px; }
       main .description .event-details .event-detail figure {
         height: 220px;
         margin: 0 auto;
-        overflow: hidden;
         text-align: center; }
       main .description .event-details .event-detail h3 {
         margin: 20px auto 10px;
@@ -242,7 +227,7 @@ main {
     background-color: #4b4d4f; }
     main .elite-reward::before, main .elite-reward::after {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       width: 100%;
       height: 400px;
@@ -253,14 +238,15 @@ main {
     main .elite-reward::before {
       top: -330px; }
     main .elite-reward .wrapper {
-      position: relative;
-      width: 700px;
-      margin-right: 165px;
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
       text-align: right; }
-      main .elite-reward .wrapper img {
-        position: absolute;
-        top: 0px;
-        left: -355px; }
+      main .elite-reward .wrapper > div:last-child {
+        width: 700px; }
+      main .elite-reward .wrapper > div:first-child > img {
+        position: relative;
+        z-index: 999; }
       main .elite-reward .wrapper h2 {
         padding: 175px 0 40px;
         color: #fff;
@@ -288,55 +274,55 @@ main {
           background-color: #4a454b; }
   main .speakers {
     padding: 50px 30px 0; }
-    main .speakers-info h2 {
-      margin-bottom: 25px;
-      color: #242424;
-      font: 50px "roboto-black"; }
-    main .speakers-info p {
-      width: 520px;
-      margin-bottom: 60px;
-      color: #242424;
-      font: 14px roboto-light; }
-    main .speakers-list .speaker {
-      position: relative;
-      width: 296px;
-      height: 296px;
-      background-color: #90d23d;
-      float: left;
-      margin: 0 40px 40px 0;
-      padding: 30px 60px 0 30px;
-      box-sizing: border-box;
-      border-radius: 15px; }
-      main .speakers-list .speaker:not(:nth-child(5))::after {
-        display: block;
-        content: "";
-        position: absolute;
-        top: 125px;
-        left: 30px;
-        width: 83px;
-        height: 6px;
-        background-color: #fff;
-        float: left; }
-      main .speakers-list .speaker:nth-of-type(3n) {
-        margin-right: 0; }
-      main .speakers-list .speaker:nth-child(2) {
-        background-image: url("D:/Portfolio/Envato/img/bg.png"); }
-      main .speakers-list .speaker:nth-child(5) {
-        background: transparent url("D:/Portfolio/Envato/img/hand.png") 50% 50% no-repeat; }
-      main .speakers-list .speaker-name {
-        margin-bottom: 20px;
-        color: #fff;
-        font: 45px "roboto-black";
-        line-height: 1; }
-      main .speakers-list .speaker-description {
-        color: #fff;
-        font: 18px "roboto-medium"; }
-      main .speakers-list .speaker-links {
-        margin-top: 55px; }
-        main .speakers-list .speaker-links a {
-          margin-right: 8px; }
-          main .speakers-list .speaker-links a:last-child {
-            margin-right: 0; }
+    main .speakers-info {
+      margin-bottom: 60px; }
+      main .speakers-info h2 {
+        color: #242424;
+        font: 50px "roboto-black";
+        margin-bottom: 25px; }
+      main .speakers-info p {
+        width: 520px;
+        color: #242424;
+        font: 14px roboto-light; }
+    main .speakers-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px; }
+      main .speakers-list .speaker {
+        position: relative;
+        width: 296px;
+        height: 296px;
+        background-color: #90d23d;
+        padding: 30px 60px 0 30px;
+        box-sizing: border-box;
+        border-radius: 15px; }
+        main .speakers-list .speaker:not(:nth-child(5))::after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 125px;
+          left: 30px;
+          width: 83px;
+          height: 6px;
+          background-color: #fff;
+          float: left; }
+        main .speakers-list .speaker:nth-child(2) {
+          background-image: url("../img/bg.png"); }
+        main .speakers-list .speaker:nth-child(5) {
+          background: transparent url("../img/hand.png") 50% 50% no-repeat; }
+        main .speakers-list .speaker-name {
+          margin-bottom: 20px;
+          color: #fff;
+          font: 45px "roboto-black";
+          line-height: 1; }
+        main .speakers-list .speaker-description {
+          color: #fff;
+          font: 18px "roboto-medium"; }
+        main .speakers-list .speaker-links {
+          display: flex;
+          gap: 8px;
+          margin-top: 55px; }
           main .speakers-list .speaker-links a::before {
             font-size: 35px;
             color: #fff; }
@@ -348,7 +334,7 @@ main {
     background-color: #4b4d4f; }
     main .sponsors::before, main .sponsors::after {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       width: 100%;
       height: 400px;
@@ -371,11 +357,11 @@ main {
         main .sponsors .wrapper p:last-of-type {
           margin-bottom: 48px; }
       main .sponsors .wrapper .sponsors-links {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 85px;
         margin-bottom: 40px; }
-        main .sponsors .wrapper .sponsors-links img {
-          margin-right: 85px; }
-          main .sponsors .wrapper .sponsors-links img:last-child {
-            margin-right: 0; }
       main .sponsors .wrapper button {
         margin-bottom: 120px;
         color: #fff;
@@ -392,55 +378,53 @@ main {
         main .sponsors .wrapper button:hover {
           background-color: #4a454b; }
   main .past-events {
-    padding-top: 117px; }
+    padding: 117px 0 87px; }
     main .past-events-description {
-      margin-left: 30px; }
+      margin-bottom: 40px; }
       main .past-events-description h2 {
-        margin-bottom: 5px;
+        margin-bottom: 25px;
         color: #242424;
         font: 50px roboto-black; }
       main .past-events-description p {
         color: #4a454b;
         font: 14px roboto-light;
-        width: 600px;
-        margin-bottom: 40px; }
+        width: 600px; }
     main .past-events-list {
-      text-align: center; }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 98px; }
       main .past-events-list .event:first-child {
         width: 60%;
         height: 416px;
-        background-color: #3d6ed2;
-        float: left; }
+        background-color: #3d6ed2; }
       main .past-events-list .event:nth-child(2) {
         width: 40%;
         height: 416px;
-        background-color: #90d23d;
-        float: left; }
+        background-color: #90d23d; }
       main .past-events-list .event:nth-child(3) {
         width: 35%;
         height: 368px;
-        background-color: #ff9d00;
-        float: left; }
+        background-color: #ff9d00; }
       main .past-events-list .event:nth-child(4) {
         width: 65%;
         height: 368px;
-        background-color: #e0652a;
-        float: left; }
-      main .past-events-list button {
-        margin: 98px 0 87px 0;
-        color: #fff;
-        width: 200px;
-        height: 55px;
-        font: 22px roboto-regular;
-        border-radius: 15px;
-        border: solid 1px #bebebe;
-        box-sizing: border-box;
-        outline: none;
-        border: none;
-        outline: none;
-        background-color: #373737; }
-        main .past-events-list button:hover {
-          background-color: #90d23d; }
+        background-color: #e0652a; }
+    main .past-events button {
+      margin: 0 auto;
+      color: #fff;
+      width: 200px;
+      height: 55px;
+      font: 22px roboto-regular;
+      border-radius: 15px;
+      border: solid 1px #bebebe;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      outline: none;
+      background-color: #373737; }
+      main .past-events button:hover {
+        background-color: #90d23d; }
 
 footer {
   text-align: center;
@@ -453,15 +437,15 @@ footer {
       position: absolute;
       left: 200px;
       top: 70px;
+      display: flex;
       width: 970px;
       background-color: #fff; }
       footer .feedback-section .feedback-info {
         width: 470px;
         height: 530px;
         background-color: #fff;
-        float: left;
         text-align: center;
-        background: url("D:/Portfolio/Envato/img/adress.png") 50% 25% no-repeat; }
+        background: url("../img/adress.png") 50% 25% no-repeat; }
         footer .feedback-section .feedback-info .adress {
           width: 270px;
           margin: 285px auto 16px;
@@ -485,11 +469,10 @@ footer {
         width: 500px;
         height: 530px;
         background-color: #fff;
-        float: left;
         padding-top: 59px;
         box-sizing: border-box;
         text-align: center; }
-        footer .feedback-section .feedback #feedback-form input[type='email'], footer .feedback-section .feedback #feedback-form textarea {
+        footer .feedback-section .feedback #feedback-form input[type="email"], footer .feedback-section .feedback #feedback-form textarea {
           color: #4a454b;
           width: 400px;
           height: 55px;
@@ -539,16 +522,15 @@ footer {
   footer .social {
     padding: 60px 0 15px 0; }
     footer .social .links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
       margin-bottom: 15px; }
-      footer .social .links a {
-        margin-right: 16px; }
-        footer .social .links a:last-child {
-          margin-right: 0; }
-        footer .social .links a::before {
-          color: #fff;
-          font-size: 45px; }
-        footer .social .links a:hover::before {
-          color: #4a454b; }
+      footer .social .links a::before {
+        color: #fff;
+        font-size: 45px; }
+      footer .social .links a:hover::before {
+        color: #4a454b; }
     footer .social small {
       display: block;
       margin: 0 auto;
