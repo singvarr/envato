@@ -25,12 +25,12 @@ window.onload = function () {
         }
 
         this.elapsed = function (where, message) {
-            document.getElementById(where).innerHTML = '<p class= elapsed>' + message + '</p>'
+            document.getElementById(where).innerHTML = '<p class=\'countdown__elapsed\'>' + message + '</p>'
             console.log(message);
         }
     };
 
-    var timer = new Clock(new Date(2024, 10, 1, 9, 47));
+    var timer = new Clock(new Date(2023, 11, 1, 9, 47));
     var timerStart = setInterval(function () {
         if (timer.getTotalTime() > 0) {
             timer.printDigits(['sec', 'min', 'hours', 'days']);

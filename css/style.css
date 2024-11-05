@@ -1,34 +1,37 @@
-header {
+.header {
   position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
   background-color: #4a454b; }
-  header .wrapper {
+  .header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 130px; }
-  header #main-menu ul {
-    display: flex;
-    font-size: 0;
-    margin: 0 -15px;
-    gap: 15px; }
-    header #main-menu ul li a {
-      display: block;
-      padding: 15px;
-      color: #fff;
-      font: 15px "roboto-thin"; }
-      header #main-menu ul li a:active, header #main-menu ul li a:hover {
-        color: #90d23d; }
+  .header__nav {
+    margin: 0 -15px; }
+
+.navigation__menu {
+  display: flex;
+  font-size: 0;
+  gap: 15px; }
+
+.navigation__link {
+  display: block;
+  padding: 15px;
+  color: #fff;
+  font: 15px "roboto-thin"; }
+  .navigation__link:active, .navigation__link:hover {
+    color: #90d23d; }
 
 main {
   padding-top: 130px; }
-  main .time-box {
+  main .countdown {
     position: relative;
     overflow: hidden;
     background-color: #4a454b; }
-    main .time-box::after {
+    main .countdown::after {
       position: absolute;
       content: "";
       left: 0;
@@ -38,189 +41,186 @@ main {
       height: 400px;
       transform: skewY(-5deg);
       background-color: white; }
-    main .time-box .wrapper {
+    main .countdown__wrapper {
       position: relative;
       padding: 100px 0 400px;
       box-sizing: border-box; }
-      main .time-box .wrapper #countdown {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 200px;
-        padding: 25px 0;
-        box-sizing: border-box;
-        border: 2px solid #90d23d;
-        background-color: #4a454b;
-        border-radius: 20px; }
-        main .time-box .wrapper #countdown .digits {
-          display: flex;
-          gap: 70px;
-          justify-content: space-between;
-          padding-bottom: 10px;
-          font-size: 0; }
-          main .time-box .wrapper #countdown .digits #days,
-          main .time-box .wrapper #countdown .digits #hours,
-          main .time-box .wrapper #countdown .digits #min,
-          main .time-box .wrapper #countdown .digits #sec {
-            color: #fff;
-            font: 100px "roboto-slab-thin";
-            text-align: center;
-            vertical-align: middle; }
-          main .time-box .wrapper #countdown .digits .caption {
-            color: white;
-            font: 25px "roboto-slab-regular";
-            text-align: center; }
-          main .time-box .wrapper #countdown .digits li {
-            display: flex;
-            flex-direction: column;
-            width: 120px;
-            align-items: center; }
-      main .time-box .wrapper .elapsed {
-        color: white;
-        font: 75px "roboto-light";
-        vertical-align: middle;
-        display: inline-block; }
-      main .time-box .wrapper .icon {
-        position: absolute;
-        left: -82px;
-        top: 520px; }
-        main .time-box .wrapper .icon:first-child {
-          z-index: 6; }
-  main .description-short {
+    main .countdown__timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      padding: 25px 0;
+      box-sizing: border-box;
+      border: 2px solid #90d23d;
+      background-color: #4a454b;
+      border-radius: 20px; }
+    main .countdown__digits {
+      display: flex;
+      gap: 70px;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      font-size: 0; }
+    main .countdown__digit {
+      color: #fff;
+      font: 100px "roboto-slab-thin";
+      text-align: center;
+      vertical-align: middle; }
+    main .countdown__caption {
+      color: white;
+      font: 25px "roboto-slab-regular";
+      text-align: center; }
+    main .countdown__item {
+      display: flex;
+      flex-direction: column;
+      width: 120px;
+      align-items: center; }
+    main .countdown__elapsed {
+      color: white;
+      font: 75px "roboto-light";
+      vertical-align: middle;
+      display: inline-block; }
+    main .countdown__icon {
+      position: absolute;
+      left: -82px;
+      top: 520px; }
+      main .countdown__icon:first-child {
+        z-index: 6; }
+  main .description {
     display: flex;
     gap: 50px;
     justify-content: space-between;
     margin: 56px auto 142px;
     box-sizing: border-box; }
-    main .description-short h1 {
-      margin-bottom: 25px;
-      color: #242424;
-      font: 50px "roboto-black"; }
-    main .description-short div > p {
+  main .description-text__title {
+    margin-bottom: 25px;
+    color: #242424;
+    font: 50px "roboto-black"; }
+  main .description-text__details {
+    margin-bottom: 20px;
+    color: #242424;
+    font: 14px "roboto-light"; }
+    main .description-text__details:last-child {
+      margin-bottom: 0; }
+  main #regBox {
+    position: relative;
+    z-index: 999;
+    width: 430px;
+    padding: 21px;
+    margin-top: -300px;
+    border: solid 1px #dbdada;
+    text-align: center;
+    background-color: #fff; }
+    main #regBox h2 {
+      margin: 34px 0 21px;
+      color: #252525;
+      font: 30px roboto-bold; }
+    main #regBox input {
+      color: #6c6c6c;
+      width: 375px;
+      height: 58px;
+      font: 19px roboto-light;
+      border-radius: 5px;
+      border: solid 1px #bebebe;
+      box-sizing: border-box;
+      outline: none;
       margin-bottom: 20px;
-      color: #242424;
-      font: 14px "roboto-light"; }
-      main .description-short div > p:last-child {
-        margin-bottom: 0; }
-    main .description-short #regBox {
-      position: relative;
-      z-index: 999;
-      width: 430px;
-      padding: 21px;
-      margin-top: -300px;
-      border: solid 1px #dbdada;
-      text-align: center;
-      background-color: #fff; }
-      main .description-short #regBox h2 {
-        margin: 34px 0 21px;
-        color: #252525;
-        font: 30px roboto-bold; }
-      main .description-short #regBox input {
-        color: #6c6c6c;
-        width: 375px;
-        height: 58px;
-        font: 19px roboto-light;
-        border-radius: 5px;
-        border: solid 1px #bebebe;
-        box-sizing: border-box;
-        outline: none;
-        margin-bottom: 20px;
-        padding: 0 15px; }
-        main .description-short #regBox input:last-child {
-          margin-bottom: 40px; }
-      main .description-short #regBox button {
-        color: #fff;
-        width: 371px;
-        height: 58px;
-        font: 22px roboto-bold;
-        border-radius: 5px;
-        border: solid 1px #bebebe;
-        box-sizing: border-box;
-        outline: none;
-        border: none;
-        outline: none;
-        background-color: #90d23d;
-        margin-bottom: 21px; }
-        main .description-short #regBox button:hover {
-          background-color: #4a454b; }
-      main .description-short #regBox p {
-        color: #6c6c6c;
-        font: 15px roboto-light; }
-  main .description .event-details {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    margin-bottom: 94px; }
-    main .description .event-details .event-detail {
-      width: 300px; }
-      main .description .event-details .event-detail figure {
-        height: 220px;
-        margin: 0 auto;
-        text-align: center; }
-      main .description .event-details .event-detail h3 {
-        margin: 20px auto 10px;
-        text-align: center;
-        color: #242424;
-        font: 35px roboto-black; }
-      main .description .event-details .event-detail p {
-        text-align: center;
-        color: #242424;
-        font: 14px roboto-light; }
-  main .description .schedule {
-    width: 100%;
-    overflow: hidden; }
-    main .description .schedule tr {
-      height: 75px; }
-      main .description .schedule tr td {
-        vertical-align: middle;
-        text-align: center; }
-        main .description .schedule tr td:first-child {
-          width: 200px; }
-        main .description .schedule tr td:nth-child(2) {
-          padding-left: 70px;
-          box-sizing: border-box;
-          text-align: left; }
-        main .description .schedule tr td:last-child {
-          width: 130px; }
-    main .description .schedule thead tr {
-      background-color: #90d23d; }
-      main .description .schedule thead tr td {
-        text-align: center;
-        color: #fff;
-        font: 30px roboto-black; }
-    main .description .schedule tbody tr:nth-child(2n) {
-      background-color: #373737; }
-    main .description .schedule tbody tr:nth-child(2n-1) {
-      background-color: #4b4d4f; }
-    main .description .schedule tbody tr:hover {
-      background-color: #90d23d; }
-    main .description .schedule tbody tr td {
+      padding: 0 15px; }
+      main #regBox input:last-child {
+        margin-bottom: 40px; }
+    main #regBox button {
       color: #fff;
-      font: 22px "roboto-regular"; }
-      main .description .schedule tbody tr td button {
-        color: #4a454b;
-        width: 33px;
-        height: 33px;
-        font: 22px "roboto-regular";
-        border-radius: 50%;
-        border: solid 1px #bebebe;
-        box-sizing: border-box;
-        outline: none;
-        border: none;
-        outline: none;
-        background-color: #fff;
-        font: 22px roboto-black; }
-        main .description .schedule tbody tr td button:hover {
-          background-color: #4a454b; }
-        main .description .schedule tbody tr td button:hover {
-          color: #fff; }
-    main .description .schedule caption {
-      color: #242424;
-      font: 14px roboto-light;
-      caption-side: bottom;
-      text-align: center;
-      width: 830px;
-      margin: 40px auto 80px; }
+      width: 371px;
+      height: 58px;
+      font: 22px roboto-bold;
+      border-radius: 5px;
+      border: solid 1px #bebebe;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      outline: none;
+      background-color: #90d23d;
+      margin-bottom: 21px; }
+      main #regBox button:hover {
+        background-color: #4a454b; }
+    main #regBox p {
+      color: #6c6c6c;
+      font: 15px roboto-light; }
+    main #regBox .event-details {
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+      margin-bottom: 94px; }
+      main #regBox .event-details .event-detail {
+        width: 300px; }
+        main #regBox .event-details .event-detail figure {
+          height: 220px;
+          margin: 0 auto;
+          text-align: center; }
+        main #regBox .event-details .event-detail h3 {
+          margin: 20px auto 10px;
+          text-align: center;
+          color: #242424;
+          font: 35px roboto-black; }
+        main #regBox .event-details .event-detail p {
+          text-align: center;
+          color: #242424;
+          font: 14px roboto-light; }
+    main #regBox .schedule {
+      width: 100%;
+      overflow: hidden; }
+      main #regBox .schedule tr {
+        height: 75px; }
+        main #regBox .schedule tr td {
+          vertical-align: middle;
+          text-align: center; }
+          main #regBox .schedule tr td:first-child {
+            width: 200px; }
+          main #regBox .schedule tr td:nth-child(2) {
+            padding-left: 70px;
+            box-sizing: border-box;
+            text-align: left; }
+          main #regBox .schedule tr td:last-child {
+            width: 130px; }
+      main #regBox .schedule thead tr {
+        background-color: #90d23d; }
+        main #regBox .schedule thead tr td {
+          text-align: center;
+          color: #fff;
+          font: 30px roboto-black; }
+      main #regBox .schedule tbody tr:nth-child(2n) {
+        background-color: #373737; }
+      main #regBox .schedule tbody tr:nth-child(2n-1) {
+        background-color: #4b4d4f; }
+      main #regBox .schedule tbody tr:hover {
+        background-color: #90d23d; }
+      main #regBox .schedule tbody tr td {
+        color: #fff;
+        font: 22px "roboto-regular"; }
+        main #regBox .schedule tbody tr td button {
+          color: #4a454b;
+          width: 33px;
+          height: 33px;
+          font: 22px "roboto-regular";
+          border-radius: 50%;
+          border: solid 1px #bebebe;
+          box-sizing: border-box;
+          outline: none;
+          border: none;
+          outline: none;
+          background-color: #fff;
+          font: 22px roboto-black; }
+          main #regBox .schedule tbody tr td button:hover {
+            background-color: #4a454b; }
+          main #regBox .schedule tbody tr td button:hover {
+            color: #fff; }
+      main #regBox .schedule caption {
+        color: #242424;
+        font: 14px roboto-light;
+        caption-side: bottom;
+        text-align: center;
+        width: 830px;
+        margin: 40px auto 80px; }
   main .elite-reward {
     position: relative;
     overflow: hidden;

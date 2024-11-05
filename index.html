@@ -9,65 +9,75 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <div class="wrapper">
+    <header class="header">
+      <div class="wrapper header__wrapper">
         <a href="/"><img src="img/logo.png" alt="logo" class="logo" /></a>
-        <nav id="main-menu">
-          <ul>
-            <li><a href="#description">event details</a></li>
-            <li><a href="#speakers">speakers</a></li>
-            <li><a href="#sponsors">sponsors</a></li>
-            <li><a href="#past-events">past events</a></li>
-            <li><a href="#contact">contact </a></li>
+        <nav class="header__nav navigation" id="main-menu">
+          <ul class="navigation__menu">
+            <li>
+              <a class="navigation__link" href="#description">event details</a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#speakers">speakers</a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#sponsors">sponsors</a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#past-events">past events</a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#contact">contact </a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <section class="time-box">
-        <div class="wrapper">
-          <div id="countdown">
-            <ul class="digits">
-              <li>
-                <span id="days"></span>
-                <span class="caption">days</span>
+      <section class="countdown">
+        <div class="wrapper countdown__wrapper">
+          <div class="countdown__timer" id="countdown">
+            <ul class="countdown__digits">
+              <li class="countdown__item">
+                <span class="countdown__digit" id="days"></span>
+                <span class="countdown__caption">days</span>
               </li>
-              <li>
-                <span id="hours"></span>
-                <span class="caption">hours</span>
+              <li class="countdown__item">
+                <span class="countdown__digit" id="hours"></span>
+                <span class="countdown__caption">hours</span>
               </li>
-              <li>
-                <span id="min"></span>
-                <span class="caption">minutes</span>
+              <li class="countdown__item">
+                <span class="countdown__digit" id="min"></span>
+                <span class="countdown__caption">minutes</span>
               </li>
-              <li>
-                <span id="sec"></span>
-                <span class="caption">seconds</span>
+              <li class="countdown__item">
+                <span class="countdown__digit" id="sec"></span>
+                <span class="countdown__caption">seconds</span>
               </li>
             </ul>
           </div>
-          <img src="img/hero-icons/1.png" class="icon" />
-          <img src="img/hero-icons/2.png" class="icon" />
-          <img src="img/hero-icons/3.png" class="icon" />
-          <img src="img/hero-icons/4.png" class="icon" />
-          <img src="img/hero-icons/5.png" class="icon" />
+          <img src="img/hero-icons/1.png" class="countdown__icon" />
+          <img src="img/hero-icons/2.png" class="countdown__icon" />
+          <img src="img/hero-icons/3.png" class="countdown__icon" />
+          <img src="img/hero-icons/4.png" class="countdown__icon" />
+          <img src="img/hero-icons/5.png" class="countdown__icon" />
         </div>
       </section>
-      <article class="description wrapper" id="description">
-        <section class="description-short">
-          <div>
-            <h1>Welcome</h1>
-            <p>
+      <article class="wrapper" id="description">
+        <section class="description">
+          <div class="description__text description-text">
+            <h1 class="description-text__title">Welcome</h1>
+            <p class="description-text__details">
               The biggest envato community meetup in Bangladesh is happening
               right now! And you can be a part of it too...
             </p>
-            <p>
+            <p class="description-text__details">
               Get together with members of the Envato community to talk shop,
               trade war stories, make new friends and see the faces behind the
               avatars. Whether you’re an author on Envato Market, a client on
               Envato Studio, or a learner on Tuts+, you are invited!
             </p>
-            <p>
+            <p class="description-text__details">
               It doesn’t matter as long as you have the motivation and interest
               to work at the envato and bring cookies to our event. Just
               kidding, but we don’t mind having more cookies! ;) Head over and
@@ -75,7 +85,7 @@
               guests. Don’t forget to register on our invite page here too!
             </p>
           </div>
-          <form action="" id="regBox">
+          <form class="description__form" action="" id="regBox">
             <h2>Sign up for our event</h2>
             <input type="text" name="fullName" placeholder="Enter your name" />
             <input type="email" name="email" placeholder="Enter your email" />
