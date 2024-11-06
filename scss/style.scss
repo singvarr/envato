@@ -125,7 +125,14 @@ main {
     justify-content: space-between;
     margin: 56px auto 142px;
     box-sizing: border-box;
+
+    &__form {
+      position: relative;
+      z-index: 999;
+      margin-top: -300px;
+    }
   }
+
   .description-text {
     &__title {
       margin-bottom: 25px;
@@ -142,23 +149,20 @@ main {
     }
   }
 
-  #regBox {
+  .signup-form {
     // @include block(430px, auto, $white);
-    position: relative;
-    z-index: 999;
     width: 430px;
     padding: 21px;
-    margin-top: -300px;
     border: solid 1px #dbdada;
     text-align: center;
     background-color: $white;
 
-    h2 {
+    &__title {
       margin: 34px 0 21px;
       @include text(#252525, 30px roboto-bold);
     }
 
-    input {
+    &__field {
       @include input(#6c6c6c, 375px, 58px, 19px roboto-light, 5px);
       margin-bottom: 20px;
       padding: 0 15px;
@@ -168,114 +172,110 @@ main {
       }
     }
 
-    button {
+    &__submit {
       @include input($white, 371px, 58px, 22px roboto-bold, 5px);
       @include button($green, $gray);
       margin-bottom: 21px;
     }
 
-    p {
+    &__text {
       @include text(#6c6c6c, 15px roboto-light);
     }
+  }
 
-    .event-details {
-      display: flex;
-      justify-content: space-between;
-      gap: 60px;
-      margin-bottom: 94px;
+  .event-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 94px;
 
-      .event-detail {
-        width: 300px;
-        figure {
-          height: 220px;
-          margin: 0 auto;
-          text-align: center;
-        }
+    &__item {
+      width: 300px;
+    }
 
-        h3 {
-          margin: 20px auto 10px;
-          text-align: center;
-          @include text($text, 35px roboto-black);
-        }
+    &__img-container {
+      height: 220px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        p {
-          text-align: center;
-          @include text($text, 14px roboto-light);
-        }
+    &__title {
+      margin: 20px auto 10px;
+      text-align: center;
+      @include text($text, 35px roboto-black);
+    }
+
+    &__text {
+      text-align: center;
+      @include text($text, 14px roboto-light);
+    }
+  }
+
+  .schedule {
+    width: 100%;
+    overflow: hidden;
+
+    &__row {
+      height: 75px;
+
+      &_heading {
+        background-color: $green !important;
+      }
+
+      &:nth-child(2n) {
+        background-color: #373737;
+      }
+
+      &:nth-child(2n-1) {
+        background-color: #4b4d4f;
+      }
+
+      &:hover {
+        background-color: $green;
       }
     }
 
-    .schedule {
-      width: 100%;
-      overflow: hidden;
+    &__cell {
+      @include text($white, 22px "roboto-regular");
+      vertical-align: middle;
+      text-align: center;
 
-      tr {
-        height: 75px;
-
-        td {
-          vertical-align: middle;
-          text-align: center;
-
-          &:first-child {
-            width: 200px;
-          }
-
-          &:nth-child(2) {
-            padding-left: 70px;
-            box-sizing: border-box;
-            text-align: left;
-          }
-
-          &:last-child {
-            width: 130px;
-          }
-        }
+      &:first-child {
+        width: 200px;
       }
 
-      thead tr {
-        background-color: $green;
-
-        td {
-          text-align: center;
-          @include text($white, 30px roboto-black);
-        }
+      &:nth-child(2) {
+        padding-left: 70px;
+        box-sizing: border-box;
+        text-align: left;
       }
 
-      tbody tr {
-        &:nth-child(2n) {
-          background-color: #373737;
-        }
-
-        &:nth-child(2n-1) {
-          background-color: #4b4d4f;
-        }
-
-        &:hover {
-          background-color: $green;
-        }
-
-        td {
-          @include text($white, 22px "roboto-regular");
-
-          button {
-            @include input($gray, 33px, 33px, 22px "roboto-regular", 50%);
-            @include button($white, $gray);
-            font: 22px roboto-black;
-
-            &:hover {
-              color: $white;
-            }
-          }
-        }
+      &:last-child {
+        width: 130px;
       }
 
-      caption {
-        @include text($text, 14px roboto-light);
-        caption-side: bottom;
+      &_heading {
         text-align: center;
-        width: 830px;
-        margin: 40px auto 80px;
+        @include text($white, 30px roboto-black);
       }
+    }
+
+    &__btn {
+      @include input($gray, 33px, 33px, 22px "roboto-regular", 50%);
+      @include button($white, $gray);
+      font: 22px roboto-black;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &__note {
+      @include text($text, 14px roboto-light);
+      caption-side: bottom;
+      text-align: center;
+      width: 830px;
+      margin: 40px auto 80px;
     }
   }
 

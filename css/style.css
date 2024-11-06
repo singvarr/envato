@@ -92,6 +92,10 @@ main {
     justify-content: space-between;
     margin: 56px auto 142px;
     box-sizing: border-box; }
+    main .description__form {
+      position: relative;
+      z-index: 999;
+      margin-top: -300px; }
   main .description-text__title {
     margin-bottom: 25px;
     color: #242424;
@@ -102,20 +106,17 @@ main {
     font: 14px "roboto-light"; }
     main .description-text__details:last-child {
       margin-bottom: 0; }
-  main #regBox {
-    position: relative;
-    z-index: 999;
+  main .signup-form {
     width: 430px;
     padding: 21px;
-    margin-top: -300px;
     border: solid 1px #dbdada;
     text-align: center;
     background-color: #fff; }
-    main #regBox h2 {
+    main .signup-form__title {
       margin: 34px 0 21px;
       color: #252525;
       font: 30px roboto-bold; }
-    main #regBox input {
+    main .signup-form__field {
       color: #6c6c6c;
       width: 375px;
       height: 58px;
@@ -126,9 +127,9 @@ main {
       outline: none;
       margin-bottom: 20px;
       padding: 0 15px; }
-      main #regBox input:last-child {
+      main .signup-form__field:last-child {
         margin-bottom: 40px; }
-    main #regBox button {
+    main .signup-form__submit {
       color: #fff;
       width: 371px;
       height: 58px;
@@ -141,86 +142,85 @@ main {
       outline: none;
       background-color: #90d23d;
       margin-bottom: 21px; }
-      main #regBox button:hover {
+      main .signup-form__submit:hover {
         background-color: #4a454b; }
-    main #regBox p {
+    main .signup-form__text {
       color: #6c6c6c;
       font: 15px roboto-light; }
-    main #regBox .event-details {
-      display: flex;
-      justify-content: space-between;
-      gap: 60px;
-      margin-bottom: 94px; }
-      main #regBox .event-details .event-detail {
-        width: 300px; }
-        main #regBox .event-details .event-detail figure {
-          height: 220px;
-          margin: 0 auto;
-          text-align: center; }
-        main #regBox .event-details .event-detail h3 {
-          margin: 20px auto 10px;
-          text-align: center;
-          color: #242424;
-          font: 35px roboto-black; }
-        main #regBox .event-details .event-detail p {
-          text-align: center;
-          color: #242424;
-          font: 14px roboto-light; }
-    main #regBox .schedule {
-      width: 100%;
-      overflow: hidden; }
-      main #regBox .schedule tr {
-        height: 75px; }
-        main #regBox .schedule tr td {
-          vertical-align: middle;
-          text-align: center; }
-          main #regBox .schedule tr td:first-child {
-            width: 200px; }
-          main #regBox .schedule tr td:nth-child(2) {
-            padding-left: 70px;
-            box-sizing: border-box;
-            text-align: left; }
-          main #regBox .schedule tr td:last-child {
-            width: 130px; }
-      main #regBox .schedule thead tr {
-        background-color: #90d23d; }
-        main #regBox .schedule thead tr td {
-          text-align: center;
-          color: #fff;
-          font: 30px roboto-black; }
-      main #regBox .schedule tbody tr:nth-child(2n) {
+  main .event-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 94px; }
+    main .event-details__item {
+      width: 300px; }
+    main .event-details__img-container {
+      height: 220px;
+      margin: 0 auto;
+      text-align: center; }
+    main .event-details__title {
+      margin: 20px auto 10px;
+      text-align: center;
+      color: #242424;
+      font: 35px roboto-black; }
+    main .event-details__text {
+      text-align: center;
+      color: #242424;
+      font: 14px roboto-light; }
+  main .schedule {
+    width: 100%;
+    overflow: hidden; }
+    main .schedule__row {
+      height: 75px; }
+      main .schedule__row_heading {
+        background-color: #90d23d !important; }
+      main .schedule__row:nth-child(2n) {
         background-color: #373737; }
-      main #regBox .schedule tbody tr:nth-child(2n-1) {
+      main .schedule__row:nth-child(2n-1) {
         background-color: #4b4d4f; }
-      main #regBox .schedule tbody tr:hover {
+      main .schedule__row:hover {
         background-color: #90d23d; }
-      main #regBox .schedule tbody tr td {
-        color: #fff;
-        font: 22px "roboto-regular"; }
-        main #regBox .schedule tbody tr td button {
-          color: #4a454b;
-          width: 33px;
-          height: 33px;
-          font: 22px "roboto-regular";
-          border-radius: 50%;
-          border: solid 1px #bebebe;
-          box-sizing: border-box;
-          outline: none;
-          border: none;
-          outline: none;
-          background-color: #fff;
-          font: 22px roboto-black; }
-          main #regBox .schedule tbody tr td button:hover {
-            background-color: #4a454b; }
-          main #regBox .schedule tbody tr td button:hover {
-            color: #fff; }
-      main #regBox .schedule caption {
-        color: #242424;
-        font: 14px roboto-light;
-        caption-side: bottom;
+    main .schedule__cell {
+      color: #fff;
+      font: 22px "roboto-regular";
+      vertical-align: middle;
+      text-align: center; }
+      main .schedule__cell:first-child {
+        width: 200px; }
+      main .schedule__cell:nth-child(2) {
+        padding-left: 70px;
+        box-sizing: border-box;
+        text-align: left; }
+      main .schedule__cell:last-child {
+        width: 130px; }
+      main .schedule__cell_heading {
         text-align: center;
-        width: 830px;
-        margin: 40px auto 80px; }
+        color: #fff;
+        font: 30px roboto-black; }
+    main .schedule__btn {
+      color: #4a454b;
+      width: 33px;
+      height: 33px;
+      font: 22px "roboto-regular";
+      border-radius: 50%;
+      border: solid 1px #bebebe;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      outline: none;
+      background-color: #fff;
+      font: 22px roboto-black; }
+      main .schedule__btn:hover {
+        background-color: #4a454b; }
+      main .schedule__btn:hover {
+        color: #fff; }
+    main .schedule__note {
+      color: #242424;
+      font: 14px roboto-light;
+      caption-side: bottom;
+      text-align: center;
+      width: 830px;
+      margin: 40px auto 80px; }
   main .elite-reward {
     position: relative;
     overflow: hidden;

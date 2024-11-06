@@ -85,46 +85,68 @@
               guests. Don’t forget to register on our invite page here too!
             </p>
           </div>
-          <form class="description__form" action="" id="regBox">
-            <h2>Sign up for our event</h2>
-            <input type="text" name="fullName" placeholder="Enter your name" />
-            <input type="email" name="email" placeholder="Enter your email" />
-            <input type="tel" name="phone" placeholder="Phone number" />
-            <input type="text" name="username" placeholder="Envato username" />
-            <button type="submit">Let me in!</button>
-            <p>Hurry up, Limited seats avaible</p>
-            <p>*we will never spam your email</p>
+          <form class="description__form signup-form" action="" id="regBox">
+            <h2 class="signup-form__title">Sign up for our event</h2>
+            <input
+              class="signup-form__field"
+              type="text"
+              name="fullName"
+              placeholder="Enter your name"
+            />
+            <input
+              class="signup-form__field"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+            <input
+              class="signup-form__field"
+              type="tel"
+              name="phone"
+              placeholder="Phone number"
+            />
+            <input
+              class="signup-form__field"
+              type="text"
+              name="username"
+              placeholder="Envato username"
+            />
+            <button class="signup-form__submit" type="submit">
+              Let me in!
+            </button>
+            <p class="signup-form__text">Hurry up, Limited seats avaible</p>
+            <p class="signup-form__text">*we will never spam your email</p>
           </form>
         </section>
         <section class="event-details">
-          <div class="event-detail">
-            <figure>
+          <div class="event-details__item">
+            <figure class="event-details__img-container">
               <img src="img/event-details/community.png" alt="" />
             </figure>
-            <h3>Community</h3>
-            <p>
+            <h3 class="event-details__title">Community</h3>
+            <p class="event-details__text">
               Meet the Community you’ve always talked with, in real life! This
               meetup will be all about authors engaging each other with
               interesting coversation and topics. We will have loads of fun.
             </p>
           </div>
-          <div class="event-detail">
-            <figure>
+          <div class="event-details__item">
+            <figure class="event-details__img-container">
               <img src="img/event-details/talk-shop.png" alt="" />
             </figure>
-            <h3>Talk Shop</h3>
-            <p>
+            <h3 class="event-details__title">Talk Shop</h3>
+            <p class="event-details__text">
               In this meetup you will get to know the marketplaces better,
               because that’s why were all here for right? Learn a few tips and
               tricks from experienced authors from all over the country.
             </p>
           </div>
-          <div class="event-detail">
-            <figure>
+          <div class="event-details__item">
+            <figure class="event-details__img-container">
               <img src="img/event-details/war-stories.png" alt="" />
             </figure>
-            <h3>War Stories</h3>
-            <p>
+            <h3 class="event-details__title">War Stories</h3>
+            <p class="event-details__text">
               Gather round fellow authors! Hear the stories of success from your
               favorite authors and learn how they we able to tackle their
               problems and become successful.
@@ -133,33 +155,51 @@
         </section>
         <table class="schedule">
           <thead>
-            <tr>
-              <td>Time</td>
-              <td colspan="2">Stuff that will happen</td>
+            <tr class="schedule__row schedule__row_heading">
+              <td class="schedule__cell schedule__cell_heading">Time</td>
+              <td class="schedule__cell schedule__cell_heading" colspan="2">
+                Stuff that will happen
+              </td>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>10am - 12pm</td>
-              <td>Introduction and presentations about Envato</td>
-              <td><button>+</button></td>
+            <tr class="schedule__row">
+              <td class="schedule__cell">10am - 12pm</td>
+              <td class="schedule__cell">
+                Introduction and presentations about Envato
+              </td>
+              <td class="schedule__cell">
+                <button class="schedule__btn">+</button>
+              </td>
             </tr>
-            <tr>
-              <td>12pm - 02 pm</td>
-              <td>Sessions by honorable guests and Speakers</td>
-              <td><button>+</button></td>
+            <tr class="schedule__row">
+              <td class="schedule__cell">12pm - 02 pm</td>
+              <td class="schedule__cell">
+                Sessions by honorable guests and Speakers
+              </td>
+              <td class="schedule__cell">
+                <button class="schedule__btn">+</button>
+              </td>
             </tr>
-            <tr>
-              <td>02pm - 03pm</td>
-              <td>Break and Mingle time with the authors</td>
-              <td><button>+</button></td>
+            <tr class="schedule__row">
+              <td class="schedule__cell">02pm - 03pm</td>
+              <td class="schedule__cell">
+                Break and Mingle time with the authors
+              </td>
+              <td class="schedule__cell">
+                <button class="schedule__btn">+</button>
+              </td>
             </tr>
-            <tr>
-              <td>03pm - 05pm</td>
-              <td>Portfolio Review, Rewards and Ending Presentation</td>
-              <td><button>+</button></td>
+            <tr class="schedule__row">
+              <td class="schedule__cell">03pm - 05pm</td>
+              <td class="schedule__cell">
+                Portfolio Review, Rewards and Ending Presentation
+              </td>
+              <td class="schedule__cell">
+                <button class="schedule__btn">+</button>
+              </td>
             </tr>
-            <caption>
+            <caption class="schedule__note">
               Please keep in mind that the timings may differ according to the
               flow of the event. The even is actually day long and we do plan to
               finish it within our set time but it doesn’t have to be, if we all
