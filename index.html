@@ -321,9 +321,7 @@
           <button class="past-events__btn">View More</button>
         </div>
       </section>
-    </main>
-    <footer>
-      <section class="feedback-section" id="contact">
+      <section class="contacts" id="contact">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.2757235989966!2d151.21310265015165!3d-33.85678438056463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae665e892fdd%3A0x3133f8d75a1ac251!2sSydney+Opera+House!5e0!3m2!1sen!2sua!4v1498557496331"
           width="100%"
@@ -332,38 +330,52 @@
           style="border: 0"
           allowfullscreen
         ></iframe>
-        <div class="feedback">
-          <div class="feedback-info">
-            <p class="adress">
+        <div class="contacts__content">
+          <div class="contacts__address-info">
+            <p class="contacts__address">
               Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122,
               Kingdom of Australia
             </p>
-            <button id="minimize">View map</button>
+            <button class="contacts__minimize" id="minimize">View map</button>
           </div>
-          <form action="post" id="feedback-form">
-            <input type="email" name="email" placeholder="Enter your e-mail" />
+          <form
+            class="contacts__feedback feedback-form"
+            action="post"
+            id="feedback-form"
+          >
+            <input
+              class="feedback-form__input"
+              type="email"
+              name="email"
+              placeholder="Enter your e-mail"
+            />
             <textarea
+              class="feedback-form__input feedback-form__input_textarea"
               name="comment"
               cols="30"
               rows="10"
               placeholder="Type your message..."
             ></textarea>
-            <button type="submit">Send message</button>
+            <button class="feedback-form__submit" type="submit">
+              Send message
+            </button>
           </form>
         </div>
-        <button id="restore">Leave feedback</button>
+        <button class="contacts__restore" id="restore">Leave feedback</button>
       </section>
-      <section class="social">
-        <div class="links">
-          <a href="#" class="flaticon-facebook-logo-button"></a>
-          <a href="#" class="flaticon-twitter-logo-button"></a>
-          <a href="#" class="flaticon-linkedin-logo-button"></a>
-          <a href="#" class="flaticon-google-plus-logo-button"></a>
-          <a href="#" class="flaticon-tumblr-logo-button"></a>
-        </div>
-        <small>Hope we see you at the event!</small>
-        <small>All Rights Reserved. Envato Bangladesh © 2015</small>
-      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="#" class="footer__link flaticon-facebook-logo-button"></a>
+        <a href="#" class="footer__link flaticon-twitter-logo-button"></a>
+        <a href="#" class="footer__link flaticon-linkedin-logo-button"></a>
+        <a href="#" class="footer__link flaticon-google-plus-logo-button"></a>
+        <a href="#" class="footer__link flaticon-tumblr-logo-button"></a>
+      </div>
+      <small class="footer__text">Hope we see you at the event!</small>
+      <small class="footer__text"
+        >All Rights Reserved. Envato Bangladesh © 2015</small
+      >
     </footer>
     <div id="scrollBtn" class="flaticon-up-arrow"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
