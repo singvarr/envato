@@ -9,65 +9,75 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <div class="wrapper">
+    <header class="header">
+      <div class="wrapper header__wrapper">
         <a href="/"><img src="img/logo.png" alt="logo" class="logo" /></a>
-        <nav id="main-menu">
-          <ul>
-            <li><a href="#description">event details</a></li>
-            <li><a href="#speakers">speakers</a></li>
-            <li><a href="#sponsors">sponsors</a></li>
-            <li><a href="#past-events">past events</a></li>
-            <li><a href="#contact">contact </a></li>
+        <nav class="header__nav navigation" id="main-menu">
+          <ul class="navigation__menu">
+            <li>
+              <a class="navigation__link" href="#description">event details</a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#speakers">speakers</a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#sponsors">sponsors</a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#past-events">past events</a>
+            </li>
+            <li>
+              <a class="navigation__link" href="#contact">contact </a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <section class="time-box">
-        <div class="wrapper">
-          <div id="countdown">
-            <ul class="digits">
-              <li>
-                <span id="days"></span>
-                <span class="caption">days</span>
+      <section class="countdown">
+        <div class="wrapper countdown__wrapper">
+          <div class="countdown__timer" id="countdown">
+            <ul class="countdown__digits">
+              <li class="countdown__item">
+                <span class="countdown__digit" id="days"></span>
+                <span class="countdown__caption">days</span>
               </li>
-              <li>
-                <span id="hours"></span>
-                <span class="caption">hours</span>
+              <li class="countdown__item">
+                <span class="countdown__digit" id="hours"></span>
+                <span class="countdown__caption">hours</span>
               </li>
-              <li>
-                <span id="min"></span>
-                <span class="caption">minutes</span>
+              <li class="countdown__item">
+                <span class="countdown__digit" id="min"></span>
+                <span class="countdown__caption">minutes</span>
               </li>
-              <li>
-                <span id="sec"></span>
-                <span class="caption">seconds</span>
+              <li class="countdown__item">
+                <span class="countdown__digit" id="sec"></span>
+                <span class="countdown__caption">seconds</span>
               </li>
             </ul>
           </div>
-          <img src="img/hero-icons/1.png" class="icon" />
-          <img src="img/hero-icons/2.png" class="icon" />
-          <img src="img/hero-icons/3.png" class="icon" />
-          <img src="img/hero-icons/4.png" class="icon" />
-          <img src="img/hero-icons/5.png" class="icon" />
+          <img src="img/hero-icons/1.png" class="countdown__icon" />
+          <img src="img/hero-icons/2.png" class="countdown__icon" />
+          <img src="img/hero-icons/3.png" class="countdown__icon" />
+          <img src="img/hero-icons/4.png" class="countdown__icon" />
+          <img src="img/hero-icons/5.png" class="countdown__icon" />
         </div>
       </section>
-      <article class="description wrapper" id="description">
-        <section class="description-short">
-          <div>
-            <h1>Welcome</h1>
-            <p>
+      <article class="wrapper" id="description">
+        <section class="description">
+          <div class="description__text description-text">
+            <h1 class="description-text__title">Welcome</h1>
+            <p class="description-text__details">
               The biggest envato community meetup in Bangladesh is happening
               right now! And you can be a part of it too...
             </p>
-            <p>
+            <p class="description-text__details">
               Get together with members of the Envato community to talk shop,
               trade war stories, make new friends and see the faces behind the
               avatars. Whether you’re an author on Envato Market, a client on
               Envato Studio, or a learner on Tuts+, you are invited!
             </p>
-            <p>
+            <p class="description-text__details">
               It doesn’t matter as long as you have the motivation and interest
               to work at the envato and bring cookies to our event. Just
               kidding, but we don’t mind having more cookies! ;) Head over and
@@ -75,46 +85,68 @@
               guests. Don’t forget to register on our invite page here too!
             </p>
           </div>
-          <form action="" id="regBox">
-            <h2>Sign up for our event</h2>
-            <input type="text" name="fullName" placeholder="Enter your name" />
-            <input type="email" name="email" placeholder="Enter your email" />
-            <input type="tel" name="phone" placeholder="Phone number" />
-            <input type="text" name="username" placeholder="Envato username" />
-            <button type="submit">Let me in!</button>
-            <p>Hurry up, Limited seats avaible</p>
-            <p>*we will never spam your email</p>
+          <form class="description__form signup-form" action="" id="regBox">
+            <h2 class="signup-form__title">Sign up for our event</h2>
+            <input
+              class="signup-form__field"
+              type="text"
+              name="fullName"
+              placeholder="Enter your name"
+            />
+            <input
+              class="signup-form__field"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+            <input
+              class="signup-form__field"
+              type="tel"
+              name="phone"
+              placeholder="Phone number"
+            />
+            <input
+              class="signup-form__field"
+              type="text"
+              name="username"
+              placeholder="Envato username"
+            />
+            <button class="signup-form__submit" type="submit">
+              Let me in!
+            </button>
+            <p class="signup-form__text">Hurry up, Limited seats avaible</p>
+            <p class="signup-form__text">*we will never spam your email</p>
           </form>
         </section>
         <section class="event-details">
-          <div class="event-detail">
-            <figure>
+          <div class="event-details__item">
+            <figure class="event-details__img-container">
               <img src="img/event-details/community.png" alt="" />
             </figure>
-            <h3>Community</h3>
-            <p>
+            <h3 class="event-details__title">Community</h3>
+            <p class="event-details__text">
               Meet the Community you’ve always talked with, in real life! This
               meetup will be all about authors engaging each other with
               interesting coversation and topics. We will have loads of fun.
             </p>
           </div>
-          <div class="event-detail">
-            <figure>
+          <div class="event-details__item">
+            <figure class="event-details__img-container">
               <img src="img/event-details/talk-shop.png" alt="" />
             </figure>
-            <h3>Talk Shop</h3>
-            <p>
+            <h3 class="event-details__title">Talk Shop</h3>
+            <p class="event-details__text">
               In this meetup you will get to know the marketplaces better,
               because that’s why were all here for right? Learn a few tips and
               tricks from experienced authors from all over the country.
             </p>
           </div>
-          <div class="event-detail">
-            <figure>
+          <div class="event-details__item">
+            <figure class="event-details__img-container">
               <img src="img/event-details/war-stories.png" alt="" />
             </figure>
-            <h3>War Stories</h3>
-            <p>
+            <h3 class="event-details__title">War Stories</h3>
+            <p class="event-details__text">
               Gather round fellow authors! Hear the stories of success from your
               favorite authors and learn how they we able to tackle their
               problems and become successful.
@@ -123,33 +155,51 @@
         </section>
         <table class="schedule">
           <thead>
-            <tr>
-              <td>Time</td>
-              <td colspan="2">Stuff that will happen</td>
+            <tr class="schedule__row schedule__row_heading">
+              <td class="schedule__cell schedule__cell_heading">Time</td>
+              <td class="schedule__cell schedule__cell_heading" colspan="2">
+                Stuff that will happen
+              </td>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>10am - 12pm</td>
-              <td>Introduction and presentations about Envato</td>
-              <td><button>+</button></td>
+            <tr class="schedule__row">
+              <td class="schedule__cell">10am - 12pm</td>
+              <td class="schedule__cell">
+                Introduction and presentations about Envato
+              </td>
+              <td class="schedule__cell">
+                <button class="schedule__btn">+</button>
+              </td>
             </tr>
-            <tr>
-              <td>12pm - 02 pm</td>
-              <td>Sessions by honorable guests and Speakers</td>
-              <td><button>+</button></td>
+            <tr class="schedule__row">
+              <td class="schedule__cell">12pm - 02 pm</td>
+              <td class="schedule__cell">
+                Sessions by honorable guests and Speakers
+              </td>
+              <td class="schedule__cell">
+                <button class="schedule__btn">+</button>
+              </td>
             </tr>
-            <tr>
-              <td>02pm - 03pm</td>
-              <td>Break and Mingle time with the authors</td>
-              <td><button>+</button></td>
+            <tr class="schedule__row">
+              <td class="schedule__cell">02pm - 03pm</td>
+              <td class="schedule__cell">
+                Break and Mingle time with the authors
+              </td>
+              <td class="schedule__cell">
+                <button class="schedule__btn">+</button>
+              </td>
             </tr>
-            <tr>
-              <td>03pm - 05pm</td>
-              <td>Portfolio Review, Rewards and Ending Presentation</td>
-              <td><button>+</button></td>
+            <tr class="schedule__row">
+              <td class="schedule__cell">03pm - 05pm</td>
+              <td class="schedule__cell">
+                Portfolio Review, Rewards and Ending Presentation
+              </td>
+              <td class="schedule__cell">
+                <button class="schedule__btn">+</button>
+              </td>
             </tr>
-            <caption>
+            <caption class="schedule__note">
               Please keep in mind that the timings may differ according to the
               flow of the event. The even is actually day long and we do plan to
               finish it within our set time but it doesn’t have to be, if we all
@@ -159,13 +209,13 @@
         </table>
       </article>
       <section class="elite-reward">
-        <div class="wrapper">
+        <div class="elite-reward__wrapper wrapper">
           <div>
-            <img src="img/badge.png" />
+            <img class="elite-reward__img" src="img/badge.png" />
           </div>
-          <div>
-            <h2>We reward the Elites!</h2>
-            <p>
+          <div class="elite-reward__content">
+            <h2 class="elite-reward__title">We reward the Elites!</h2>
+            <p class="elite-reward__text">
               Are you an Elite author in the Envato Marketplaces? If so we are
               proud of you! We want to give our thanks in achieving great
               success in the marketplace and we want to make known to the people
@@ -173,44 +223,56 @@
               includes giving you special merchandize from our community and
               also promote your works in our community.
             </p>
-            <p>
+            <p class="elite-reward__text">
               All you have to do is contact us by clicking the button here and
               then its just going to the event, saying something motivational
               and taking that swag while looking amazing infront of thousands of
               other community members.
             </p>
-            <p>
+            <p class="elite-reward__text">
               *Be advised, we will only give you Elite thank you swag for each
               level of elite you cross.That means if you do not cross to the
               next elite level before the next event, you cannot claim your
               prizes.
             </p>
-            <button>Bring on the swag!</button>
+            <button class="elite-reward__btn">Bring on the swag!</button>
           </div>
         </div>
       </section>
       <section class="speakers wrapper" id="speakers">
-        <div class="speakers-info">
-          <h2>Speakers</h2>
-          <p>
+        <div class="speakers-info speakers__info">
+          <h2 class="speakers-info__title">Speakers</h2>
+          <p class="speakers-info__text">
             Meet our Valuable speakers who will be each giving 10 minutes
             sessions on different subjects regarding being a digital product
             author, working at envato and marketing your business. Hope you will
             have a great time listening to our presentations!
           </p>
         </div>
-        <div class="speakers-list">
+        <div class="speakers__list">
           <div class="speaker"></div>
           <div class="speaker">
-            <h3 class="speaker-name">Shahriyer Shuvo</h3>
-            <span class="speaker-description"
+            <h3 class="speaker__name">Shahriyer Shuvo</h3>
+            <span class="speaker__description"
               >More about selling in the Envato Marketplaces</span
             >
-            <div class="speaker-links">
-              <a href="#" class="flaticon-facebook-logo-button"></a>
-              <a href="#" class="flaticon-twitter-logo-button"></a>
-              <a href="#" class="flaticon-behance-logo-button"></a>
-              <a href="#" class="flaticon-dribble-logo-button"></a>
+            <div class="speaker__links">
+              <a
+                href="#"
+                class="speaker__link flaticon-facebook-logo-button"
+              ></a>
+              <a
+                href="#"
+                class="speaker__link flaticon-twitter-logo-button"
+              ></a>
+              <a
+                href="#"
+                class="speaker__link flaticon-behance-logo-button"
+              ></a>
+              <a
+                href="#"
+                class="speaker__link flaticon-dribble-logo-button"
+              ></a>
             </div>
           </div>
           <div class="speaker"></div>
@@ -223,45 +285,43 @@
         </div>
       </section>
       <section class="sponsors" id="sponsors">
-        <div class="wrapper">
-          <h2>Sponsor our event!</h2>
-          <p>
+        <div class="wrapper sponsors__wrapper">
+          <h2 class="sponsors__title">Sponsor our event!</h2>
+          <p class="sponsors__text">
             If you want to help us making this event lively and successful, help
             us by sponsoring our event! This will help us bring in more people,
             have better livestreaming equipment, maybe even our own chef! You
             can also sponsor us by giving away free swag at the event!
           </p>
-          <p>Here’s who have sponsored us already:</p>
-          <div class="sponsors-links">
+          <p class="sponsors__text">Here’s who have sponsored us already:</p>
+          <div class="sponsors__links">
             <img src="img/sponsors/s-1.png" />
             <img src="img/sponsors/s-2.png" />
             <img src="img/sponsors/envato.png" />
           </div>
-          <button>Sponsor us</button>
+          <button class="sponsors__btn">Sponsor us</button>
         </div>
       </section>
       <section class="past-events wrapper" id="past-events">
-        <div class="past-events-description">
-          <h2>Past events</h2>
-          <p>
+        <div class="past-events__description">
+          <h2 class="past-events__title">Past events</h2>
+          <p class="past-events__text">
             Check out the photos of our previous events where we rocked with a
             lot of Famous and enthusiatic authors! We’re always planning to make
             our future events feel fresh and fun to be at. :)
           </p>
         </div>
         <div>
-          <ul class="past-events-list">
-            <li class="event"></li>
-            <li class="event"></li>
-            <li class="event"></li>
-            <li class="event"></li>
+          <ul class="past-events__list">
+            <li class="past-events__event"></li>
+            <li class="past-events__event"></li>
+            <li class="past-events__event"></li>
+            <li class="past-events__event"></li>
           </ul>
-          <button>View More</button>
+          <button class="past-events__btn">View More</button>
         </div>
       </section>
-    </main>
-    <footer>
-      <section class="feedback-section" id="contact">
+      <section class="contacts" id="contact">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.2757235989966!2d151.21310265015165!3d-33.85678438056463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae665e892fdd%3A0x3133f8d75a1ac251!2sSydney+Opera+House!5e0!3m2!1sen!2sua!4v1498557496331"
           width="100%"
@@ -270,38 +330,52 @@
           style="border: 0"
           allowfullscreen
         ></iframe>
-        <div class="feedback">
-          <div class="feedback-info">
-            <p class="adress">
+        <div class="contacts__content">
+          <div class="contacts__address-info">
+            <p class="contacts__address">
               Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122,
               Kingdom of Australia
             </p>
-            <button id="minimize">View map</button>
+            <button class="contacts__minimize" id="minimize">View map</button>
           </div>
-          <form action="post" id="feedback-form">
-            <input type="email" name="email" placeholder="Enter your e-mail" />
+          <form
+            class="contacts__feedback feedback-form"
+            action="post"
+            id="feedback-form"
+          >
+            <input
+              class="feedback-form__input"
+              type="email"
+              name="email"
+              placeholder="Enter your e-mail"
+            />
             <textarea
+              class="feedback-form__input feedback-form__input_textarea"
               name="comment"
               cols="30"
               rows="10"
               placeholder="Type your message..."
             ></textarea>
-            <button type="submit">Send message</button>
+            <button class="feedback-form__submit" type="submit">
+              Send message
+            </button>
           </form>
         </div>
-        <button id="restore">Leave feedback</button>
+        <button class="contacts__restore" id="restore">Leave feedback</button>
       </section>
-      <section class="social">
-        <div class="links">
-          <a href="#" class="flaticon-facebook-logo-button"></a>
-          <a href="#" class="flaticon-twitter-logo-button"></a>
-          <a href="#" class="flaticon-linkedin-logo-button"></a>
-          <a href="#" class="flaticon-google-plus-logo-button"></a>
-          <a href="#" class="flaticon-tumblr-logo-button"></a>
-        </div>
-        <small>Hope we see you at the event!</small>
-        <small>All Rights Reserved. Envato Bangladesh © 2015</small>
-      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="#" class="footer__link flaticon-facebook-logo-button"></a>
+        <a href="#" class="footer__link flaticon-twitter-logo-button"></a>
+        <a href="#" class="footer__link flaticon-linkedin-logo-button"></a>
+        <a href="#" class="footer__link flaticon-google-plus-logo-button"></a>
+        <a href="#" class="footer__link flaticon-tumblr-logo-button"></a>
+      </div>
+      <small class="footer__text">Hope we see you at the event!</small>
+      <small class="footer__text"
+        >All Rights Reserved. Envato Bangladesh © 2015</small
+      >
     </footer>
     <div id="scrollBtn" class="flaticon-up-arrow"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

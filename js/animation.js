@@ -1,12 +1,12 @@
-$(document).ready(function() {
-    function move(i, top, left) {
-        $('.time-box .icon')
-            .eq(i)
+$(document).ready(function () {
+	function move(i, top, left) {
+		$('.countdown__icon')
+			.eq(i)
 			.animate({
 				top: top,
 				left: left
 			}, 2000)
-			.css('z-index', $('.time-box .icon').length - i);
+			.css('z-index', $('.countdown__icon').length - i);
 	}
 
 	move(1, '-=10', '+=132');

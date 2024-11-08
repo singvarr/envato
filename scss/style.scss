@@ -1,635 +1,634 @@
 @import "_mixins.scss";
 
-header {
+.header {
   position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
-
   background-color: $gray;
-  .wrapper {
+
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 130px;
   }
 
-  #main-menu {
-    ul {
-      display: flex;
-      font-size: 0;
-      margin: 0 -15px;
-      gap: 15px;
-      li {
-        a {
-          display: block;
-          padding: 15px;
-          @include text($white, 15px "roboto-thin");
+  &__nav {
+    margin: 0 -15px;
+  }
+}
 
-          &:active,
-          &:hover {
-            color: $green;
-          }
-        }
-      }
+.navigation {
+  &__menu {
+    display: flex;
+    font-size: 0;
+    gap: 15px;
+  }
+
+  &__link {
+    display: block;
+    padding: 15px;
+    @include text($white, 15px "roboto-thin");
+
+    &:active,
+    &:hover {
+      color: $green;
     }
   }
 }
 
 main {
   padding-top: 130px;
+}
 
-  .time-box {
+.countdown {
+  position: relative;
+  overflow: hidden;
+  background-color: $gray;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -330px;
+    z-index: 10;
+    width: 100%;
+    height: 400px;
+    transform: skewY(-5deg);
+    background-color: white;
+  }
+
+  &__wrapper {
     position: relative;
-    overflow: hidden;
+    padding: 100px 0 400px;
+    box-sizing: border-box;
+  }
+
+  &__timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 25px 0;
+    box-sizing: border-box;
+    border: 2px solid $green;
     background-color: $gray;
-
-    &::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: -330px;
-      z-index: 10;
-      width: 100%;
-      height: 400px;
-      transform: skewY(-5deg);
-      background-color: white;
-    }
-
-    .wrapper {
-      position: relative;
-      padding: 100px 0 400px;
-      box-sizing: border-box;
-
-      #countdown {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 200px;
-        padding: 25px 0;
-        box-sizing: border-box;
-        border: 2px solid $green;
-        background-color: $gray;
-        border-radius: 20px;
-
-        .digits {
-          display: flex;
-          gap: 70px;
-          justify-content: space-between;
-          padding-bottom: 10px;
-          font-size: 0;
-
-          #days,
-          #hours,
-          #min,
-          #sec {
-            @include text($white, 100px "roboto-slab-thin");
-            text-align: center;
-            vertical-align: middle;
-          }
-          .caption {
-            @include text(white, 25px "roboto-slab-regular");
-            text-align: center;
-          }
-          li {
-            display: flex;
-            flex-direction: column;
-            width: 120px;
-            align-items: center;
-          }
-        }
-      }
-
-      .elapsed {
-        @include text(white, 75px "roboto-light");
-        vertical-align: middle;
-        display: inline-block;
-      }
-
-      .icon {
-        position: absolute;
-        left: -82px;
-        top: 520px;
-
-        &:first-child {
-          z-index: 6;
-        }
-      }
-    }
+    border-radius: 20px;
   }
 
-  .description {
-    &-short {
-      display: flex;
-      gap: 50px;
-      justify-content: space-between;
-      margin: 56px auto 142px;
-      box-sizing: border-box;
-
-      h1 {
-        margin-bottom: 25px;
-        @include text($text, 50px "roboto-black");
-      }
-
-      div > p {
-        margin-bottom: 20px;
-        @include text($text, 14px "roboto-light");
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      #regBox {
-        // @include block(430px, auto, $white);
-        position: relative;
-        z-index: 999;
-        width: 430px;
-        padding: 21px;
-        margin-top: -300px;
-        border: solid 1px #dbdada;
-        text-align: center;
-        background-color: $white;
-
-        h2 {
-          margin: 34px 0 21px;
-          @include text(#252525, 30px roboto-bold);
-        }
-
-        input {
-          @include input(#6c6c6c, 375px, 58px, 19px roboto-light, 5px);
-          margin-bottom: 20px;
-          padding: 0 15px;
-
-          &:last-child {
-            margin-bottom: 40px;
-          }
-        }
-
-        button {
-          @include input($white, 371px, 58px, 22px roboto-bold, 5px);
-          @include button($green, $gray);
-          margin-bottom: 21px;
-        }
-
-        p {
-          @include text(#6c6c6c, 15px roboto-light);
-        }
-      }
-    }
-
-    .event-details {
-      display: flex;
-      justify-content: space-between;
-      gap: 60px;
-      margin-bottom: 94px;
-
-      .event-detail {
-        width: 300px;
-        figure {
-          height: 220px;
-          margin: 0 auto;
-          text-align: center;
-        }
-
-        h3 {
-          margin: 20px auto 10px;
-          text-align: center;
-          @include text($text, 35px roboto-black);
-        }
-
-        p {
-          text-align: center;
-          @include text($text, 14px roboto-light);
-        }
-      }
-    }
-
-    .schedule {
-      width: 100%;
-      overflow: hidden;
-
-      tr {
-        height: 75px;
-
-        td {
-          vertical-align: middle;
-          text-align: center;
-
-          &:first-child {
-            width: 200px;
-          }
-
-          &:nth-child(2) {
-            padding-left: 70px;
-            box-sizing: border-box;
-            text-align: left;
-          }
-
-          &:last-child {
-            width: 130px;
-          }
-        }
-      }
-
-      thead tr {
-        background-color: $green;
-
-        td {
-          text-align: center;
-          @include text($white, 30px roboto-black);
-        }
-      }
-
-      tbody tr {
-        &:nth-child(2n) {
-          background-color: #373737;
-        }
-
-        &:nth-child(2n-1) {
-          background-color: #4b4d4f;
-        }
-
-        &:hover {
-          background-color: $green;
-        }
-
-        td {
-          @include text($white, 22px "roboto-regular");
-
-          button {
-            @include input($gray, 33px, 33px, 22px "roboto-regular", 50%);
-            @include button($white, $gray);
-            font: 22px roboto-black;
-
-            &:hover {
-              color: $white;
-            }
-          }
-        }
-      }
-
-      caption {
-        @include text($text, 14px roboto-light);
-        caption-side: bottom;
-        text-align: center;
-        width: 830px;
-        margin: 40px auto 80px;
-      }
-    }
+  &__digits {
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    font-size: 0;
   }
 
-  .elite-reward {
-    position: relative;
-    overflow: hidden;
-    background-color: #4b4d4f;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      width: 100%;
-      height: 400px;
-      transform: skewY(-5deg);
-      background-color: white;
-    }
-
-    &::after {
-      bottom: -330px;
-    }
-
-    &::before {
-      top: -330px;
-    }
-
-    .wrapper {
-      display: flex;
-      gap: 40px;
-      justify-content: space-between;
-      text-align: right;
-      & > div:last-child {
-        width: 700px;
-      }
-      & > div:first-child > img {
-        position: relative;
-        z-index: 999;
-      }
-      h2 {
-        padding: 175px 0 40px;
-        @include text($white, 50px "roboto-black");
-      }
-
-      p {
-        margin-bottom: 14px;
-        @include text($white, 14px "roboto-light");
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      button {
-        margin: 40px auto 175px;
-        @include input($white, 200px, 55px, 18px "roboto-regular", 15px);
-        @include button($green, $gray);
-      }
-    }
+  &__digit {
+    @include text($white, 100px "roboto-slab-thin");
+    text-align: center;
+    vertical-align: middle;
   }
 
-  .speakers {
-    padding: 50px 30px 0;
-
-    &-info {
-      margin-bottom: 60px;
-      h2 {
-        @include text($text, 50px "roboto-black");
-        margin-bottom: 25px;
-      }
-
-      p {
-        width: 520px;
-        @include text($text, 14px roboto-light);
-      }
-    }
-
-    &-list {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 40px;
-      .speaker {
-        position: relative;
-        width: 296px;
-        height: 296px;
-        background-color: $green;
-        padding: 30px 60px 0 30px;
-        box-sizing: border-box;
-        border-radius: 15px;
-
-        &:not(:nth-child(5))::after {
-          display: block;
-          content: "";
-          position: absolute;
-          top: 125px;
-          left: 30px;
-          @include block(83px, 6px, $white);
-        }
-
-        &:nth-child(2) {
-          background-image: url("../img/bg.png");
-        }
-
-        &:nth-child(5) {
-          background: transparent url("../img/hand.png") 50% 50% no-repeat;
-        }
-
-        &-name {
-          margin-bottom: 20px;
-          @include text($white, 45px "roboto-black");
-          line-height: 1;
-        }
-
-        &-description {
-          @include text($white, 18px "roboto-medium");
-        }
-
-        &-links {
-          display: flex;
-          gap: 8px;
-          margin-top: 55px;
-
-          a {
-            &::before {
-              font-size: 35px;
-              color: $white;
-            }
-
-            &:hover::before {
-              color: $gray;
-            }
-          }
-        }
-      }
-    }
+  &__caption {
+    @include text(white, 25px "roboto-slab-regular");
+    text-align: center;
   }
 
-  .sponsors {
-    position: relative;
-    overflow: hidden;
-    background-color: #4b4d4f;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      width: 100%;
-      height: 400px;
-      transform: skewY(-5deg);
-      background-color: white;
-    }
-
-    &::after {
-      bottom: -330px;
-    }
-
-    &::before {
-      top: -330px;
-    }
-
-    .wrapper {
-      padding-top: 170px;
-      text-align: center;
-
-      h2 {
-        margin-bottom: 30px;
-        @include text($white, 50px roboto-black);
-      }
-
-      p {
-        @include text($white, 14px roboto-light);
-
-        &:last-of-type {
-          margin-bottom: 48px;
-        }
-      }
-
-      .sponsors-links {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 85px;
-        margin-bottom: 40px;
-      }
-
-      button {
-        margin-bottom: 120px;
-        @include input($white, 200px, 55px, 22px roboto-regular, 15px);
-        @include button($green, $gray);
-      }
-    }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    align-items: center;
   }
 
-  .past-events {
-    padding: 117px 0 87px;
+  &__elapsed {
+    @include text(white, 75px "roboto-light");
+    vertical-align: middle;
+    display: inline-block;
+  }
 
-    &-description {
-      margin-bottom: 40px;
+  &__icon {
+    position: absolute;
+    left: -82px;
+    top: 520px;
 
-      h2 {
-        margin-bottom: 25px;
-        @include text($text, 50px roboto-black);
-      }
-
-      p {
-        @include text($gray, 14px roboto-light);
-        width: 600px;
-      }
-    }
-
-    &-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 98px;
-
-      .event:first-child {
-        width: 60%;
-        height: 416px;
-        background-color: #3d6ed2;
-      }
-
-      .event:nth-child(2) {
-        width: 40%;
-        height: 416px;
-        background-color: $green;
-      }
-
-      .event:nth-child(3) {
-        width: 35%;
-        height: 368px;
-        background-color: #ff9d00;
-      }
-
-      .event:nth-child(4) {
-        width: 65%;
-        height: 368px;
-        background-color: #e0652a;
-      }
-    }
-    button {
-      margin: 0 auto;
-      @include input($white, 200px, 55px, 22px roboto-regular, 15px);
-      @include button(#373737, $green);
+    &:first-child {
+      z-index: 6;
     }
   }
 }
 
-footer {
-  text-align: center;
-  overflow: hidden;
-  background-color: $green;
+.description {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin: 56px auto 142px;
+  box-sizing: border-box;
 
-  .feedback-section {
+  &__form {
     position: relative;
-    height: 670px;
+    z-index: 999;
+    margin-top: -300px;
+  }
+}
 
-    .feedback {
-      position: absolute;
-      left: 200px;
-      top: 70px;
-      display: flex;
-      width: 970px;
-      background-color: $white;
+.description-text {
+  &__title {
+    margin-bottom: 25px;
+    @include text($text, 50px "roboto-black");
+  }
 
-      &-info {
-        width: 470px;
-        height: 530px;
-        background-color: $white;
-        //  block(470px, 530px, $white);
-        text-align: center;
-        background: url("../img/adress.png") 50% 25% no-repeat;
+  &__details {
+    margin-bottom: 20px;
+    @include text($text, 14px "roboto-light");
 
-        .adress {
-          width: 270px;
-          margin: 285px auto 16px;
-          @include text($gray, 18px roboto-light);
-        }
-
-        #minimize {
-          @include input($white, 200px, 55px, 22px roboto-regular, 15px);
-          @include button($green, $gray);
-        }
-      }
-
-      #feedback-form {
-        width: 500px;
-        height: 530px;
-        background-color: $white;
-        padding-top: 59px;
-        box-sizing: border-box;
-        text-align: center;
-
-        input[type="email"] {
-          @include input($gray, 400px, 55px, 19px roboto-light, 5px);
-          padding: 0 20px;
-          margin: 0 auto 28px;
-        }
-
-        textarea {
-          @extend input[type="email"];
-          height: 255px;
-          padding-top: 15px;
-        }
-
-        button {
-          @include input($white, 400px, 60px, 22px roboto-regular, 5px);
-          @include button(#373737, $green);
-        }
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
+}
 
-    #restore {
-      display: none;
-      position: absolute;
-      top: -55px;
-      left: 50%;
-      margin-left: -100px;
-      @include input($white, 200px, 55px, 22px roboto-regular, 15px);
-      @include button($green, $gray);
+.signup-form {
+  // @include block(430px, auto, $white);
+  width: 430px;
+  padding: 21px;
+  border: solid 1px #dbdada;
+  text-align: center;
+  background-color: $white;
+
+  &__title {
+    margin: 34px 0 21px;
+    @include text(#252525, 30px roboto-bold);
+  }
+
+  &__field {
+    @include input(#6c6c6c, 375px, 58px, 19px roboto-light, 5px);
+    margin-bottom: 20px;
+    padding: 0 15px;
+
+    &:last-child {
+      margin-bottom: 40px;
     }
   }
 
-  .social {
-    padding: 60px 0 15px 0;
+  &__submit {
+    @include input($white, 371px, 58px, 22px roboto-bold, 5px);
+    @include button($green, $gray);
+    margin-bottom: 21px;
+  }
 
-    .links {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 15px;
+  &__text {
+    @include text(#6c6c6c, 15px roboto-light);
+  }
+}
 
-      a {
-        &::before {
-          color: $white;
-          font-size: 45px;
-        }
+.event-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 94px;
 
-        &:hover::before {
-          color: $gray;
-        }
-      }
+  &__item {
+    width: 300px;
+  }
+
+  &__img-container {
+    height: 220px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 20px auto 10px;
+    text-align: center;
+    @include text($text, 35px roboto-black);
+  }
+
+  &__text {
+    text-align: center;
+    @include text($text, 14px roboto-light);
+  }
+}
+
+.schedule {
+  width: 100%;
+  overflow: hidden;
+
+  &__row {
+    height: 75px;
+
+    &_heading {
+      background-color: $green !important;
     }
 
-    small {
-      display: block;
-      margin: 0 auto;
-      @include text($white, 18px roboto-light);
+    &:nth-child(2n) {
+      background-color: #373737;
+    }
 
-      &:last-child {
-        padding-bottom: 42px;
-      }
+    &:nth-child(2n-1) {
+      background-color: #4b4d4f;
+    }
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+
+  &__cell {
+    @include text($white, 22px "roboto-regular");
+    vertical-align: middle;
+    text-align: center;
+
+    &:first-child {
+      width: 200px;
+    }
+
+    &:nth-child(2) {
+      padding-left: 70px;
+      box-sizing: border-box;
+      text-align: left;
+    }
+
+    &:last-child {
+      width: 130px;
+    }
+
+    &_heading {
+      text-align: center;
+      @include text($white, 30px roboto-black);
+    }
+  }
+
+  &__btn {
+    @include input($gray, 33px, 33px, 22px "roboto-regular", 50%);
+    @include button($white, $gray);
+    font: 22px roboto-black;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__note {
+    @include text($text, 14px roboto-light);
+    caption-side: bottom;
+    text-align: center;
+    width: 830px;
+    margin: 40px auto 80px;
+  }
+}
+
+.elite-reward {
+  position: relative;
+  overflow: hidden;
+  background-color: #4b4d4f;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 400px;
+    transform: skewY(-5deg);
+    background-color: white;
+  }
+
+  &::after {
+    bottom: -330px;
+  }
+
+  &::before {
+    top: -330px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    text-align: right;
+  }
+
+  &__content {
+    width: 700px;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 999;
+  }
+
+  &__title {
+    padding: 175px 0 40px;
+    @include text($white, 50px "roboto-black");
+  }
+
+  &__text {
+    margin-bottom: 14px;
+    @include text($white, 14px "roboto-light");
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    margin: 40px auto 175px;
+    @include input($white, 200px, 55px, 18px "roboto-regular", 15px);
+    @include button($green, $gray);
+  }
+}
+
+.speakers {
+  padding: 50px 30px 0;
+
+  &__info {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+.speakers-info {
+  &__title {
+    @include text($text, 50px "roboto-black");
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    width: 520px;
+    @include text($text, 14px roboto-light);
+  }
+}
+
+.speaker {
+  position: relative;
+  width: 296px;
+  height: 296px;
+  background-color: $green;
+  padding: 30px 60px 0 30px;
+  box-sizing: border-box;
+  border-radius: 15px;
+
+  &:not(:nth-child(5))::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 125px;
+    left: 30px;
+    @include block(83px, 6px, $white);
+  }
+
+  &:nth-child(2) {
+    background-image: url("../img/bg.png");
+  }
+
+  &:nth-child(5) {
+    background: transparent url("../img/hand.png") 50% 50% no-repeat;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    @include text($white, 45px "roboto-black");
+    line-height: 1;
+  }
+
+  &__description {
+    @include text($white, 18px "roboto-medium");
+  }
+
+  &__links {
+    display: flex;
+    gap: 8px;
+    margin-top: 55px;
+  }
+  &__link {
+    &::before {
+      font-size: 35px;
+      color: $white;
+    }
+
+    &:hover::before {
+      color: $gray;
+    }
+  }
+}
+
+.sponsors {
+  position: relative;
+  overflow: hidden;
+  background-color: #4b4d4f;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 400px;
+    transform: skewY(-5deg);
+    background-color: white;
+  }
+
+  &::after {
+    bottom: -330px;
+  }
+
+  &::before {
+    top: -330px;
+  }
+
+  &__wrapper {
+    padding-top: 170px;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include text($white, 50px roboto-black);
+  }
+
+  &__text {
+    @include text($white, 14px roboto-light);
+
+    &:last-of-type {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 85px;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    margin-bottom: 120px;
+    @include input($white, 200px, 55px, 22px roboto-regular, 15px);
+    @include button($green, $gray);
+  }
+}
+
+.past-events {
+  padding: 117px 0 87px;
+
+  &__description {
+    margin-bottom: 40px;
+  }
+  &__title {
+    margin-bottom: 25px;
+    @include text($text, 50px roboto-black);
+  }
+
+  &__text {
+    @include text($gray, 14px roboto-light);
+    width: 600px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 98px;
+  }
+  &__event:first-child {
+    width: 60%;
+    height: 416px;
+    background-color: #3d6ed2;
+  }
+
+  &__event:nth-child(2) {
+    width: 40%;
+    height: 416px;
+    background-color: $green;
+  }
+
+  &__event:nth-child(3) {
+    width: 35%;
+    height: 368px;
+    background-color: #ff9d00;
+  }
+
+  &__event:nth-child(4) {
+    width: 65%;
+    height: 368px;
+    background-color: #e0652a;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    @include input($white, 200px, 55px, 22px roboto-regular, 15px);
+    @include button(#373737, $green);
+  }
+}
+
+.contacts {
+  position: relative;
+  height: 670px;
+
+  &__content {
+    position: absolute;
+    left: 200px;
+    top: 70px;
+    display: flex;
+    width: 970px;
+    background-color: $white;
+  }
+
+  &__address-info {
+    width: 470px;
+    height: 530px;
+    background-color: $white;
+    text-align: center;
+    background: url("../img/adress.png") 50% 25% no-repeat;
+  }
+
+  &__address {
+    width: 270px;
+    margin: 285px auto 16px;
+    @include text($gray, 18px roboto-light);
+  }
+
+  &__minimize {
+    @include input($white, 200px, 55px, 22px roboto-regular, 15px);
+    @include button($green, $gray);
+  }
+
+  &__restore {
+    display: none;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    margin-left: -100px;
+    @include input($white, 200px, 55px, 22px roboto-regular, 15px);
+    @include button($green, $gray);
+  }
+}
+
+.feedback-form {
+  width: 500px;
+  height: 530px;
+  background-color: $white;
+  padding-top: 59px;
+  box-sizing: border-box;
+  text-align: center;
+
+  &__input {
+    @include input($gray, 400px, 55px, 19px roboto-light, 5px);
+    padding: 0 20px;
+    margin: 0 auto 28px;
+
+    &_textarea {
+      height: 255px;
+      padding-top: 15px;
+    }
+  }
+
+  &__submit {
+    @include input($white, 400px, 60px, 22px roboto-regular, 5px);
+    @include button(#373737, $green);
+  }
+}
+
+.footer {
+  text-align: center;
+  overflow: hidden;
+  background-color: $green;
+  padding: 60px 0 15px 0;
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    &::before {
+      color: $white;
+      font-size: 45px;
+    }
+
+    &:hover::before {
+      color: $gray;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin: 0 auto;
+    @include text($white, 18px roboto-light);
+
+    &:last-child {
+      padding-bottom: 42px;
     }
   }
 }
