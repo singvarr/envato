@@ -2,10 +2,10 @@
 
 A landing page for an Envato offline event.
 
-## Running application
+## Launch of application
 
 1. Install dependencies in package.json
-2. Run `scss` script for compilation SCSS to CSS.
+2. Run `scss:watch` script for compilation SCSS to CSS.
 
 ## Contributors
 
