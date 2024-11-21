@@ -11,7 +11,7 @@ A landing page for an Envato offline event.
 
 Initially implemented in 2017, reworked in 2024.
 
-[@singvarr]:
+[@singvarr](https://github.com/singvarr):
 
 - built initial markup built on floats
 - implemented logic using JQuery.
