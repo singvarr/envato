@@ -1,5 +1,15 @@
 {
-  "dependencies": {
+  "name": "envato",
+  "version": "1.0.0",
+  "description": "A landing page for an Envato offline event",
+  "main": "index.html",
+  "scripts": {
+    "scss": "node-sass ./scss/style.scss ./css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
     "node-sass": "^9.0.0"
   }
 }
