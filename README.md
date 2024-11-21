@@ -2,6 +2,8 @@
 
 A landing page for an Envato offline event.
 
+[**Demo**](https://singvarr.github.io/envato/)
+
 ## Launch of application
 
 1. Install dependencies in package.json
