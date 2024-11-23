@@ -6,12 +6,14 @@
   "scripts": {
     "lint": "stylelint '**/*.scss'",
     "scss:watch": "node-sass ./scss/style.scss ./css/style.css -w",
-    "scss:build": "node-sass ./scss/style.scss ./dist/css/style.css"
+    "scss:build": "node-sass ./scss/style.scss ./dist/css/style.css",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^9.1.7",
     "node-sass": "^9.0.0",
     "stylelint": "^16.10.0",
     "stylelint-config-recess-order": "^5.1.1",
