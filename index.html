@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Envato Bangladesh</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="fonts/flaticon/flaticon.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -11,7 +15,9 @@
   <body>
     <header class="header">
       <div class="wrapper header__wrapper">
-        <a href="/"><img src="img/logo.png" alt="logo" class="logo" /></a>
+        <a class="header__logo-link" href="/"
+          ><img src="img/logo.png" alt="logo" class="header__logo"
+        /></a>
         <nav class="header__nav navigation" id="main-menu">
           <ul class="navigation__menu">
             <li>
@@ -31,9 +37,37 @@
             </li>
           </ul>
         </nav>
+        <button class="header__mobile-menu-btn burger">
+          <span class="burger__item"></span>
+          <span class="burger__item"></span>
+          <span class="burger__item"></span>
+        </button>
+        <div class="mobile-menu">
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+              <li>
+                <a class="mobile-menu__link" href="#description"
+                  >event details</a
+                >
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="#speakers">speakers</a>
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="#sponsors">sponsors</a>
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="#past-events">past events</a>
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="#contact">contact </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
-    <main>
+    <!-- <main>
       <section class="countdown">
         <div class="wrapper countdown__wrapper">
           <div class="countdown__timer" id="countdown">
@@ -376,7 +410,7 @@
       <small class="footer__text"
         >All Rights Reserved. Envato Bangladesh © 2015</small
       >
-    </footer>
+    </footer> -->
     <div id="scrollBtn" class="flaticon-up-arrow"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>

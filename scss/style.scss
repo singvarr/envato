@@ -1,5 +1,21 @@
 @import "_mixins.scss";
 
+* {
+  box-sizing: border-box;
+}
+
+%button-reset {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.responsive-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -11,11 +27,64 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 130px;
+    @media (max-width: 1100px) {
+      height: 80px;
+    }
+    @media (min-width: 1100px) {
+      height: 130px;
+    }
+  }
+  &__logo {
+    @media (max-width: 1100px) {
+      height: 40px;
+      max-width: 100%;
+    }
   }
 
   &__nav {
     margin: 0 -15px;
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+  &__mobile-menu-btn {
+    @media (min-width: 1100px) {
+      display: none;
+    }
+  }
+}
+.burger {
+  @extend %button-reset;
+  padding: 15px;
+  &__item {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  &__nav {
+    margin-left: auto;
+    width: 40%;
+    height: 100%;
+    padding: 40px;
+    background-color: $gray;
+  }
+  &__link {
+    font-family: "roboto-bold";
+    font-size: 36px;
+    padding: 10px 0;
+    display: block;
+    color: white;
   }
 }
 
@@ -531,6 +600,7 @@ main {
 }
 
 .contacts {
+  display: none;
   position: relative;
   height: 670px;
 
@@ -634,8 +704,20 @@ main {
 }
 
 .wrapper {
-  margin: 0 auto;
-  width: 1030px;
+  @media (min-width: 1100px) {
+    margin: 0 auto;
+    max-width: 1030px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    margin: 0 15px;
+  }
+
+  @media (min-width: 600px) and (max-width: 1100px) {
+    max-width: 100%;
+    margin: 0 30px;
+  }
 }
 
 .clearfix {
