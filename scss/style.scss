@@ -15,9 +15,14 @@
   max-width: 100%;
   height: auto;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
@@ -68,18 +73,25 @@
 }
 
 .mobile-menu {
+  display: none;
   position: fixed;
   inset: 0;
-
   background-color: rgba(0, 0, 0, 0.4);
+  &__close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
   &__nav {
+    position: relative;
     margin-left: auto;
-    width: 40%;
+    width: 300px;
     height: 100%;
-    padding: 40px;
+    padding: 100px 40px 40px;
     background-color: $gray;
   }
   &__link {
+    text-align: right;
     font-family: "roboto-bold";
     font-size: 36px;
     padding: 10px 0;
@@ -108,7 +120,7 @@
 }
 
 main {
-  padding-top: 130px;
+  flex-grow: 1;
 }
 
 .countdown {
@@ -129,21 +141,24 @@ main {
   }
 
   &__wrapper {
-    position: relative;
-    padding: 100px 0 400px;
-    box-sizing: border-box;
+    @media (min-width: 1100px) {
+      position: relative;
+      padding: 100px 0 400px;
+    }
   }
 
   &__timer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    padding: 25px 0;
+    padding: 25px;
     box-sizing: border-box;
     border: 2px solid $green;
     background-color: $gray;
     border-radius: 20px;
+    @media (min-width: 600px) {
+      min-height: 200px;
+    }
   }
 
   &__digits {
@@ -173,11 +188,19 @@ main {
   }
 
   &__elapsed {
-    @include text(white, 75px "roboto-light");
+    text-align: center;
     vertical-align: middle;
     display: inline-block;
+    @media (max-width: 600px) {
+      @include text(white, 40px "roboto-light");
+    }
+    @media (min-width: 600px) and (max-width: 1100px) {
+      @include text(white, 60px "roboto-light");
+    }
+    @media (min-width: 1100px) {
+      @include text(white, 75px "roboto-light");
+    }
   }
-
   &__icon {
     position: absolute;
     left: -82px;
