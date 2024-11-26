@@ -1,12 +1,12 @@
-//COLORS
+// COLORS
 $gray: #4a454b;
 $green: #90d23d;
 $white: #fff;
 $text: #242424;
 
 @mixin text($color, $font) {
-  color: $color;
   font: $font;
+  color: $color;
 }
 
 @mixin input(
@@ -17,20 +17,20 @@ $text: #242424;
   $border-radius,
   $border: solid 1px #bebebe
 ) {
-  color: $color;
+  box-sizing: border-box;
   width: $width;
   height: $height;
   font: $font;
-  border-radius: $border-radius;
+  color: $color;
   border: $border;
-  box-sizing: border-box;
+  border-radius: $border-radius;
   outline: none;
 }
 
 @mixin button($bg-color, $bg-hover) {
+  background-color: $bg-color;
   border: none;
   outline: none;
-  background-color: $bg-color;
 
   &:hover {
     background-color: $bg-hover;
@@ -38,10 +38,10 @@ $text: #242424;
 }
 
 @mixin block($width, $height: auto, $bg-color: transparent, $float: left) {
+  float: $float;
   width: $width;
   height: $height;
   background-color: $bg-color;
-  float: $float;
 }
 
 @mixin valign() {
@@ -49,8 +49,8 @@ $text: #242424;
 
   &::before {
     display: inline-block;
-    content: "";
     height: 100%;
     vertical-align: middle;
+    content: "";
   }
 }
