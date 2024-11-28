@@ -1,4 +1,20 @@
 $(document).ready(function () {
+	const burgerMenuButton = document.getElementById('burger');
+	const mobileMenu = document.getElementById('mobile-menu');
+	const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+	if (burgerMenuButton && mobileMenu) {
+		burgerMenuButton.addEventListener('click', () => {
+			mobileMenu.classList.toggle('mobile-menu_open');
+		});
+
+		if (mobileMenu && closeMobileMenu) {
+			closeMobileMenu.addEventListener('click', () => {
+				mobileMenu.classList.remove('mobile-menu_open');
+			});
+		}
+	}
+
 	$(window).on("scroll", function onScroll() {
 		var scrollPosition = $(document).scrollTop();
 
@@ -14,12 +30,14 @@ $(document).ready(function () {
 			var target = this.hash;
 			$target = $(target);
 
-			$('body').stop().animate({
-				'scrollTop': $target.offset().top
-			}, 500, 'swing', function () {
-				window.location.hash = target;
-				$(window).on("scroll", onScroll);
-			});
+			if ($target) {
+				$('body').stop().animate({
+					'scrollTop': $target.offset().top
+				}, 500, 'swing', function () {
+					window.location.hash = target;
+					$(window).on("scroll", onScroll);
+				});
+			}
 		})
 
 		$('#main-menu a').each(function () {
