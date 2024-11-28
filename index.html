@@ -102,8 +102,7 @@
           <img src="img/hero-icons/5.png" class="countdown__icon" />
         </div>
       </section>
-      <!--  <article class="wrapper" id="description">
-        
+      <article class="wrapper" id="description">
         <section class="description">
           <div class="description__text description-text">
             <h1 class="description-text__title">Welcome</h1>
@@ -161,7 +160,11 @@
         <section class="event-details">
           <div class="event-details__item">
             <figure class="event-details__img-container">
-              <img src="img/event-details/community.png" alt="" />
+              <img
+                class="event-details__img"
+                src="img/event-details/community.png"
+                alt=""
+              />
             </figure>
             <h3 class="event-details__title">Community</h3>
             <p class="event-details__text">
@@ -172,7 +175,11 @@
           </div>
           <div class="event-details__item">
             <figure class="event-details__img-container">
-              <img src="img/event-details/talk-shop.png" alt="" />
+              <img
+                class="event-details__img"
+                src="img/event-details/talk-shop.png"
+                alt=""
+              />
             </figure>
             <h3 class="event-details__title">Talk Shop</h3>
             <p class="event-details__text">
@@ -183,7 +190,11 @@
           </div>
           <div class="event-details__item">
             <figure class="event-details__img-container">
-              <img src="img/event-details/war-stories.png" alt="" />
+              <img
+                class="event-details__img"
+                src="img/event-details/war-stories.png"
+                alt=""
+              />
             </figure>
             <h3 class="event-details__title">War Stories</h3>
             <p class="event-details__text">
@@ -250,7 +261,7 @@
       </article>
       <section class="elite-reward">
         <div class="elite-reward__wrapper wrapper">
-          <div>
+          <div class="elite-reward__img-container">
             <img class="elite-reward__img" src="img/badge.png" />
           </div>
           <div class="elite-reward__content">
@@ -279,7 +290,44 @@
           </div>
         </div>
       </section>
-      <section class="speakers wrapper" id="speakers">
+      <section class="sponsors" id="sponsors">
+        <div class="wrapper sponsors__wrapper">
+          <h2 class="sponsors__title">Sponsor our event!</h2>
+          <p class="sponsors__text">
+            If you want to help us making this event lively and successful, help
+            us by sponsoring our event! This will help us bring in more people,
+            have better livestreaming equipment, maybe even our own chef! You
+            can also sponsor us by giving away free swag at the event!
+          </p>
+          <p class="sponsors__text">Here’s who have sponsored us already:</p>
+          <div class="sponsors__links">
+            <img class="sponsors__logo" src="img/sponsors/s-1.png" />
+            <img class="sponsors__logo" src="img/sponsors/s-2.png" />
+            <img class="sponsors__logo" src="img/sponsors/envato.png" />
+          </div>
+          <button class="sponsors__btn">Sponsor us</button>
+        </div>
+      </section>
+      <section class="past-events wrapper" id="past-events">
+        <div class="past-events__description">
+          <h2 class="past-events__title">Past events</h2>
+          <p class="past-events__text">
+            Check out the photos of our previous events where we rocked with a
+            lot of Famous and enthusiastic authors! We’re always planning to
+            make our future events feel fresh and fun to be at. :)
+          </p>
+        </div>
+        <div>
+          <ul class="past-events__list">
+            <li class="past-events__event"></li>
+            <li class="past-events__event"></li>
+            <li class="past-events__event"></li>
+            <li class="past-events__event"></li>
+          </ul>
+          <button class="past-events__btn">View More</button>
+        </div>
+      </section>
+      <!--  <section class="speakers wrapper" id="speakers">
         <div class="speakers-info speakers__info">
           <h2 class="speakers-info__title">Speakers</h2>
           <p class="speakers-info__text">
@@ -324,43 +372,7 @@
           <div class="speaker"></div>
         </div>
       </section>
-      <section class="sponsors" id="sponsors">
-        <div class="wrapper sponsors__wrapper">
-          <h2 class="sponsors__title">Sponsor our event!</h2>
-          <p class="sponsors__text">
-            If you want to help us making this event lively and successful, help
-            us by sponsoring our event! This will help us bring in more people,
-            have better livestreaming equipment, maybe even our own chef! You
-            can also sponsor us by giving away free swag at the event!
-          </p>
-          <p class="sponsors__text">Here’s who have sponsored us already:</p>
-          <div class="sponsors__links">
-            <img src="img/sponsors/s-1.png" />
-            <img src="img/sponsors/s-2.png" />
-            <img src="img/sponsors/envato.png" />
-          </div>
-          <button class="sponsors__btn">Sponsor us</button>
-        </div>
-      </section>
-      <section class="past-events wrapper" id="past-events">
-        <div class="past-events__description">
-          <h2 class="past-events__title">Past events</h2>
-          <p class="past-events__text">
-            Check out the photos of our previous events where we rocked with a
-            lot of Famous and enthusiastic authors! We’re always planning to make
-            our future events feel fresh and fun to be at. :)
-          </p>
-        </div>
-        <div>
-          <ul class="past-events__list">
-            <li class="past-events__event"></li>
-            <li class="past-events__event"></li>
-            <li class="past-events__event"></li>
-            <li class="past-events__event"></li>
-          </ul>
-          <button class="past-events__btn">View More</button>
-        </div>
-      </section>
+     
       <section class="contacts" id="contact">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.2757235989966!2d151.21310265015165!3d-33.85678438056463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae665e892fdd%3A0x3133f8d75a1ac251!2sSydney+Opera+House!5e0!3m2!1sen!2sua!4v1498557496331"
@@ -406,17 +418,19 @@
    -->
     </main>
     <footer class="footer">
-      <div class="footer__links">
-        <a href="#" class="footer__link flaticon-facebook-logo-button"></a>
-        <a href="#" class="footer__link flaticon-twitter-logo-button"></a>
-        <a href="#" class="footer__link flaticon-linkedin-logo-button"></a>
-        <a href="#" class="footer__link flaticon-google-plus-logo-button"></a>
-        <a href="#" class="footer__link flaticon-tumblr-logo-button"></a>
+      <div class="wrapper">
+        <div class="footer__links">
+          <a href="#" class="footer__link flaticon-facebook-logo-button"></a>
+          <a href="#" class="footer__link flaticon-twitter-logo-button"></a>
+          <a href="#" class="footer__link flaticon-linkedin-logo-button"></a>
+          <a href="#" class="footer__link flaticon-google-plus-logo-button"></a>
+          <a href="#" class="footer__link flaticon-tumblr-logo-button"></a>
+        </div>
+        <small class="footer__text">Hope we see you at the event!</small>
+        <small class="footer__text"
+          >All Rights Reserved. Envato Bangladesh © 2015</small
+        >
       </div>
-      <small class="footer__text">Hope we see you at the event!</small>
-      <small class="footer__text"
-        >All Rights Reserved. Envato Bangladesh © 2015</small
-      >
     </footer>
     <div id="scrollBtn" class="flaticon-up-arrow"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

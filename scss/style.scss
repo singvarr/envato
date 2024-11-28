@@ -10,7 +10,7 @@
   border: 0;
 }
 
-.responsive-img {
+%responsive-img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -275,15 +275,34 @@ main {
 
 .description {
   box-sizing: border-box;
-  display: flex;
-  gap: 50px;
-  justify-content: space-between;
-  margin: 56px auto 142px;
+
+  @media (min-width: 1100px) {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    margin: 56px auto 142px;
+  }
+
+  @media (max-width: 1100px) {
+    margin: 56px auto 60px;
+  }
 
   &__form {
-    position: relative;
-    z-index: 999;
-    margin-top: -300px;
+    @media (min-width: 1100px) {
+      position: relative;
+      z-index: 999;
+      margin-top: -300px;
+    }
+
+    @media (max-width: 1100px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    @media (max-width: 1100px) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -306,8 +325,7 @@ main {
 }
 
 .signup-form {
-  // @include block(430px, auto, $white);
-  width: 430px;
+  max-width: 430px;
   padding: 21px;
   text-align: center;
   background-color: $white;
@@ -320,7 +338,7 @@ main {
   }
 
   &__field {
-    @include input(#6c6c6c, 375px, 58px, 19px roboto-light, 5px);
+    @include input(#6c6c6c, 100%, 58px, 19px roboto-light, 5px);
 
     padding: 0 15px;
     margin-bottom: 20px;
@@ -332,7 +350,7 @@ main {
 
   &__submit {
     @include button($green, $gray);
-    @include input($white, 371px, 58px, 22px roboto-bold, 5px);
+    @include input($white, 100%, 58px, 22px roboto-bold, 5px);
 
     margin-bottom: 21px;
   }
@@ -343,19 +361,46 @@ main {
 }
 
 .event-details {
-  display: flex;
-  gap: 60px;
-  justify-content: space-between;
-  margin-bottom: 94px;
+  @media (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 94px;
+  }
+
+  @media (min-width: 600px) and (max-width: 1100px) {
+    gap: 30px;
+  }
+
+  @media (min-width: 1100px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 60px;
+  }
 
   &__item {
-    width: 300px;
+    max-width: 300px;
+
+    @media (max-width: 600px) {
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 220px;
     margin: 0 auto;
-    text-align: center;
+  }
+
+  &__img {
+    @extend %responsive-img;
   }
 
   &__title {
@@ -373,6 +418,7 @@ main {
 }
 
 .schedule {
+  display: none;
   width: 100%;
   overflow: hidden;
 
@@ -469,28 +515,50 @@ main {
   }
 
   &__wrapper {
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-    text-align: right;
+    @media (min-width: 1100px) {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+      text-align: right;
+    }
   }
 
   &__content {
-    width: 700px;
+    @media (min-width: 1100px) {
+      width: 700px;
+    }
+  }
+
+  &__img-container {
+    margin-bottom: 40px;
   }
 
   &__img {
+    @extend %responsive-img;
+
     position: relative;
     z-index: 999;
+    margin: 0 auto;
   }
 
   &__title {
-    padding: 175px 0 40px;
+    @media (min-width: 1100px) {
+      padding: 175px 0 40px;
+    }
+
+    @media (max-width: 1100px) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
     @include text($white, 50px "roboto-black");
   }
 
   &__text {
+    @media (max-width: 1100px) {
+      text-align: justify;
+    }
+
     margin-bottom: 14px;
 
     @include text($white, 14px "roboto-light");
@@ -501,7 +569,15 @@ main {
   }
 
   &__btn {
-    margin: 40px auto 175px;
+    display: block;
+
+    @media (min-width: 1100px) {
+      margin: 40px 0 175px auto;
+    }
+
+    @media (max-width: 1100px) {
+      margin: 40px auto 120px;
+    }
 
     @include input($white, 200px, 55px, 18px "roboto-regular", 15px);
     @include button($green, $gray);
@@ -632,17 +708,36 @@ main {
   &__text {
     @include text($white, 14px roboto-light);
 
+    @media (max-width: 600px) {
+      text-align: justify;
+    }
+
     &:last-of-type {
       margin-bottom: 48px;
     }
   }
 
   &__links {
-    display: flex;
-    gap: 85px;
-    align-items: flex-end;
-    justify-content: center;
+    @media (min-width: 600px) {
+      display: flex;
+      gap: 85px;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
     margin-bottom: 40px;
+  }
+
+  &__logo {
+    @extend %responsive-img;
+
+    @media (max-width: 600px) {
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
   }
 
   &__btn {
@@ -654,7 +749,13 @@ main {
 }
 
 .past-events {
-  padding: 117px 0 87px;
+  @media (max-width: 1100px) {
+    padding: 50px 0;
+  }
+
+  @media (min-width: 1100px) {
+    padding: 117px 0 87px;
+  }
 
   &__description {
     margin-bottom: 40px;
@@ -669,41 +770,72 @@ main {
   &__text {
     @include text($gray, 14px roboto-light);
 
-    width: 600px;
+    max-width: 600px;
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 98px;
+    @media (min-width: 1100px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 98px;
+    }
+
+    @media (max-width: 1100px) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__event {
+    @media (max-width: 600px) {
+      height: 200px;
+    }
+
+    &:not(:last-child) {
+      @media (max-width: 1100px) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__event:first-child {
-    width: 60%;
+    @media (min-width: 1100px) {
+      width: 60%;
+    }
+
     height: 416px;
     background-color: #3d6ed2;
   }
 
   &__event:nth-child(2) {
-    width: 40%;
+    @media (min-width: 1100px) {
+      width: 40%;
+    }
+
     height: 416px;
     background-color: $green;
   }
 
   &__event:nth-child(3) {
-    width: 35%;
+    @media (min-width: 1100px) {
+      width: 35%;
+    }
+
     height: 368px;
     background-color: #ff9d00;
   }
 
   &__event:nth-child(4) {
-    width: 65%;
+    @media (min-width: 1100px) {
+      width: 65%;
+    }
+
     height: 368px;
     background-color: #e0652a;
   }
 
   &__btn {
+    display: block;
     margin: 0 auto;
 
     @include button(#373737, $green);
