@@ -6,11 +6,14 @@ $(document).ready(function () {
 	if (burgerMenuButton && mobileMenu) {
 		burgerMenuButton.addEventListener('click', () => {
 			mobileMenu.classList.toggle('mobile-menu_open');
+			burgerMenuButton.classList.toggle('burger_open');
 		});
 
 		if (mobileMenu && closeMobileMenu) {
 			closeMobileMenu.addEventListener('click', () => {
 				mobileMenu.classList.remove('mobile-menu_open');
+				burgerMenuButton.classList.toggle('burger_open');
+				closeMobileMenu.classList.toggle('burger_open');
 			});
 		}
 	}
