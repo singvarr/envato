@@ -273,6 +273,12 @@ main {
   }
 }
 
+.main-content {
+  @media (max-width: 1100px) {
+    padding-bottom: 50px;
+  }
+}
+
 .description {
   box-sizing: border-box;
 
@@ -376,7 +382,7 @@ main {
   }
 
   @media (max-width: 600px) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   &__item {
@@ -417,10 +423,49 @@ main {
   }
 }
 
+.mobile-schedule {
+  overflow: hidden;
+  color: white;
+  border-radius: 4px;
+
+  @media (min-width: 1100px) {
+    display: none;
+  }
+
+  &__time {
+    display: block;
+    margin-bottom: 4px;
+    font: 16px roboto-bold, sans-serif;
+  }
+
+  &__event-name {
+    font: 14px roboto-light, sans-serif;
+  }
+
+  &__event {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    &:nth-child(2n) {
+      background-color: #373737;
+    }
+
+    &:nth-child(2n-1) {
+      background-color: #4b4d4f;
+    }
+  }
+}
+
 .schedule {
-  display: none;
   width: 100%;
   overflow: hidden;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
 
   &__row {
     height: 75px;
@@ -469,17 +514,6 @@ main {
     }
   }
 
-  &__btn {
-    @include input($gray, 33px, 33px, 22px "roboto-regular", 50%);
-    @include button($white, $gray);
-
-    font: 22px roboto-black, sans-serif;
-
-    &:hover {
-      color: $white;
-    }
-  }
-
   &__note {
     @include text($text, 14px roboto-light);
 
@@ -487,6 +521,17 @@ main {
     margin: 40px auto 80px;
     text-align: center;
     caption-side: bottom;
+  }
+}
+
+.add-event {
+  @include input($gray, 33px, 33px, 22px "roboto-regular", 50%);
+  @include button($white, $gray);
+
+  font: 22px roboto-black, sans-serif;
+
+  &:hover {
+    color: $white;
   }
 }
 
@@ -845,21 +890,28 @@ main {
 
 .contacts {
   position: relative;
-  display: none;
   height: 670px;
 
   &__content {
     position: absolute;
-    top: 70px;
-    left: 200px;
+    top: 50%;
+    left: 50%;
     display: flex;
-    width: 970px;
+    padding: 60px 20px;
     background-color: $white;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: 1100px) {
+      width: 970px;
+    }
+
+    @media (max-width: 1100px) {
+      width: 85%;
+    }
   }
 
   &__address-info {
-    width: 470px;
-    height: 530px;
+    width: 50%;
     text-align: center;
     background: url("../img/address.png") 50% 25% no-repeat;
     background-color: $white;
@@ -887,18 +939,18 @@ main {
     @include input($white, 200px, 55px, 22px roboto-regular, 15px);
     @include button($green, $gray);
   }
+
+  &__feedback {
+    width: 50%;
+  }
 }
 
 .feedback-form {
-  box-sizing: border-box;
-  width: 500px;
-  height: 530px;
-  padding-top: 59px;
   text-align: center;
   background-color: $white;
 
   &__input {
-    @include input($gray, 400px, 55px, 19px roboto-light, 5px);
+    @include input($gray, 100%, 55px, 19px roboto-light, 5px);
 
     padding: 0 20px;
     margin: 0 auto 28px;
@@ -910,7 +962,7 @@ main {
   }
 
   &__submit {
-    @include input($white, 400px, 60px, 22px roboto-regular, 5px);
+    @include input($white, 100%, 60px, 22px roboto-regular, 5px);
     @include button(#373737, $green);
   }
 }
