@@ -30,7 +30,7 @@ window.onload = function () {
         }
     };
 
-    var timer = new Clock(new Date(2023, 11, 1, 9, 47));
+    var timer = new Clock(new Date(2024, 11, 1, 9, 47));
     var timerStart = setInterval(function () {
         if (timer.getTotalTime() > 0) {
             timer.printDigits(['sec', 'min', 'hours', 'days']);
